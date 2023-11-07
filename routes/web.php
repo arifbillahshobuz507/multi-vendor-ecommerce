@@ -26,6 +26,7 @@ use App\Http\Controllers\UserController;
 */
 
 // authentication
+
 Route::get('/login/form',[UserController::class , 'loginform'])->name('login.form');
 Route::post('/login-form-post',[UserController::class , 'loginpost'])->name('login.form.post');
 
