@@ -34,26 +34,33 @@ class AdminController extends Controller
   }
  public function store(Request $request){
 
-  $validate = Validator::make($request->all(),[
+  /* $validate = Validator::make($request->all(),[
     'first_name'=>'required',
     'last_name'=>'required',
     'gmail'=>'required',
     'phone'=>'required|numeric|min:10',
+    'date'=>'required',
+    'address'=>'required',
+    'gender'=>'required',
     'password'=>'required',
 ]);
 if($validate->fails())
 {
 // notify()->error($validate->getMessageBag());
 // return redirect()->back();
-return redirect()->back()->withErrors($validate);
-}
-
+// return redirect()->back()->withErrors($validate);
+dd('ehllo');
+} */
+// dd('hello');
   Admin::create([
     'first_name'=>$request->first_name,
     'last_name'=>$request->last_name,
     'gmail'=>$request->email,
     'phone'=>$request->phone,
-    'password'=>$request->password
+    'password'=>$request->password,
+    'date,'=>$request->date,
+    'address'=>$request->address,
+    'password'=>$request->gender
 ]);
 return redirect()->route('admin.list');
 

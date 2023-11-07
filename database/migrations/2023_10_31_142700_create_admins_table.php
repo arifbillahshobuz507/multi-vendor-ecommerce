@@ -16,8 +16,11 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('gmail')->unique();
-            $table->string('password');
             $table->unsignedInteger('phone');
+            $table->string('password');
+            $table->unsignedBigInteger('date');
+            $table->string('address');
+            $table->string('gender');
             $table->timestamps();
         });
     }

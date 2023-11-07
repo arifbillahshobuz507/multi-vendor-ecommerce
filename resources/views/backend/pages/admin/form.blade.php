@@ -44,21 +44,21 @@
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Date of Birth</label>
-                <input type="email" name="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <input type="date" name="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Address</label>
-                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <input type="email" name="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Gender</label>
-                <select name="" id="" class="form-control">
+                <select name="gender" id="" class="form-control">
 
                     <option value="">mail</option>
                     <option value="">femail</option>

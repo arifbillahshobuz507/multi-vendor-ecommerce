@@ -31,14 +31,6 @@ Route::get('/login/form',[UserController::class , 'loginform'])->name('login.for
 Route::post('/login-form-post',[UserController::class , 'loginpost'])->name('login.form.post');
 
 Route::group(['middleware'=>'auth'], function(){
-
-
-
-
-
-
-
-
 Route::get('/logout',[UserController::class , 'logout'])->name('logout');
 
 Route::get('/', [AdminController::class, 'forntendHomePage'])->name('home');
@@ -58,6 +50,13 @@ Route::get('/customer/list', [CustomerController::class, 'list'])->name('custome
 Route::get('/customer/from', [CustomerController::class, 'from'])->name('add.customer');
 Route::post('/customer/store', [CustomerController::class, 'store'])->name('sotre.customer');
 
+
+// category cnotrol
+Route::get('/backend/categori', [CategoriesController::class, 'list'])->name('category.list');
+Route::get('/backendRoute/add/categories', [CategoriesController::class, 'form'])->name('add.categories');
+Route::post('/backend/stor/categories', [CategoriesController::class, 'store'])->name('stor.categories');
+
+// Route::get('/backend/categori', [CategoriesController::class, 'list'])->name('subcategory.list');
 
 
 
@@ -106,11 +105,7 @@ Route::post('/customer/store', [CustomerController::class, 'store'])->name('sotr
 
 
 
-// Route::get('/backend/categori', [CategoriesController::class, 'list'])->name('category.list');
-// Route::get('/backendRoute/add/categories', [CategoriesController::class, 'form'])->name('add.categories');
-// Route::post('/backend/stor/categories', [CategoriesController::class, 'stor'])->name('stor.categories');
 
-// Route::get('/backend/categori', [CategoriesController::class, 'list'])->name('subcategory.list');
 
 
 // Route::get('/backend/brand', [BrandsController::class, 'list'])->name('brand.list');

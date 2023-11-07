@@ -17,7 +17,7 @@
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('category.list')}}">
                     Category
                 </a>
             </div>
