@@ -5,7 +5,7 @@
         <h1>
             Input your Information!
         </h1>
-        <form action="{{route('sotre.users')}}" method="post" class="was-validated">
+        <form action="{{route('sotre.users')}}" method="post" class="was-validated" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>
@@ -16,14 +16,14 @@
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Last Name</label>
-                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Last Name" required >
+                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Last Name" required>
             </div>
             @error('last_name')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" name="gmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -37,33 +37,35 @@
             @enderror
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required  >
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
             </div>
             @error('password')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Date of Birth</label>
-                <input type="date" name="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <input type="date" name="birth_day" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Address</label>
-                <input type="email" name="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <input type="text" name="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Image</label>
+                <input type="file" name="abc" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Gender</label>
-                <select name="gender" id="" class="form-control">
-
-                    <option value="">mail</option>
-                    <option value="">femail</option>
+                <select name="gender" id="" class="form-control" required>
+                    <option value="mail">mail</option>
+                    <option value="femail">femail</option>
                 </select>
-
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
