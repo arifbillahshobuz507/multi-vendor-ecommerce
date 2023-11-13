@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\backend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -13,7 +14,7 @@ class PaymentController extends Controller
     public function paymentList()
   {
     return view("backend.pages.payments.list");
-  } 
+  }
   public function see(Request $request){
     dd($request->all());
    }

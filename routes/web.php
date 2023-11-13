@@ -1,19 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\RivewController;
-use App\Http\Controllers\StoreController;
-use App\Http\Controllers\BrandsController;
-use App\Http\Controllers\ProdutController;
+use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\backend\BrandsController;
+use App\Http\Controllers\backend\CategoriesController;
+use App\Http\Controllers\backend\CustomerController;
+use App\Http\Controllers\backend\OrderController;
+use App\Http\Controllers\backend\PaymentController;
+use App\Http\Controllers\backend\ProdutController;
+use App\Http\Controllers\backend\SuplaireController;
+use App\Http\Controllers\backend\UserController;
 use App\Http\Controllers\SellerController;
-use App\Http\Controllers\PaymentController;
-use App\Http\Controllers\SuplaireController;
-use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\UserController;
-
+use Illuminate\Support\Facades\Route;
 
 
 // frontend routes

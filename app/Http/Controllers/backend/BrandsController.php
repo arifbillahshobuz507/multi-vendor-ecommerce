@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\backend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class BrandsController extends Controller
@@ -15,7 +16,7 @@ class BrandsController extends Controller
       return view("backend.pages.brands.form");
     }
     public function stor(Request $request)
-    { 
+    {
       dd($request->all());
     }
 }

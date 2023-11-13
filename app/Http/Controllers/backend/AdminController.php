@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\backend;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
 
 
 class AdminController extends Controller
@@ -46,7 +46,7 @@ class AdminController extends Controller
     }
     // dd('hello');
     $fileName = null;
-    if ($request->hasFile('image')) 
+    if ($request->hasFile('image'))
     {
       $file = $request->file('image');
       $fileName = date('Ymdhis') . '.' . $file->getClientOriginalExtension();
