@@ -8,31 +8,43 @@ use Illuminate\Support\Facades\Validator;
 
 class CategoriesController extends Controller
 {
+    // Category
     public function category_list()
     {
-        return view("backend.pages.category.category");
+        $categories = Category::paginate(15);
+//        dd($categories);
+
+        return view("backend.pages.category.category",compact('categories'));
         // dd('hello');
     }
     public function form()
     {
         return view("backend.pages.category.form");
     }
-    public function store(Request $request)
+    public function store (Request $request)
     {
+        //dd($request->all());
         $validate = Validator::make($request->all(), [
             'category_name' => 'required'
         ]);
+
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate);
-        } else {
-            return redirect() -> route('category.list');
         }
-        //   dd($request->all());
+        //dd($request->all());
+        $fileName = null;
+        if ($request->hasFile('image')){
+            $file = $request->file('image');
+            $fileName = date('Ymdhis'). ".". $file->getClientOriginalName();
+            $file->storeAs('/category/image', $fileName);
+        }
         Category::create([
             'category_name'=>$request->category_name,
-            'image'=>$request->image,
+            'image'=>$fileName,
             'descripton'=>$request->descripton
         ]);
+        //dd($request->all());
+        return redirect()->route('category.list');
     }
 
     // SubCategory

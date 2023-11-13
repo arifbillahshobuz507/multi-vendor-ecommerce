@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="{{ route('store.list') }}">
+                <a class="nav-link" href="">
                     Store
                 </a>
             </div>

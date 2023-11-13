@@ -53,7 +53,9 @@ Route::group(['prefix'=>'backend'], function()
         Route::get('/subcategori/list', [CategoriesController::class, 'subcategory_list'])->name('subcategory.list');
 
         // Store || Shop Routes
-        Route::get('/store/list', [StoreController::class, 'list'])->name('store.list');
+        Route::get('/backend/suplaier', [SuplaireController::class, 'list'])->name('suplaire.list');
+        Route::get('/backend/add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
+        Route::get('/backend/add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
 
         // Brands Routes
         Route::get('/brand/list', [BrandsController::class, 'list'])->name('brand.list');
@@ -77,6 +79,7 @@ Route::group(['prefix'=>'backend'], function()
         Route::get('/backend/payment', [PaymentController::class, 'list'])->name('payment.list');
         Route::get('/backend/see/payment', [PaymentController::class, 'paymentList'])->name('see.payments');
         Route::get('/backend/see/payment', [PaymentController::class, 'seepayments'])->name('see.payments');
+
 
         // backend Logout
         Route::get('/logout',[UserController::class , 'logout'])->name('admin.logout');
@@ -104,9 +107,6 @@ Route::group(['prefix'=>'backend'], function()
 
 
 
-// Route::get('/backend/suplaier', [SuplaireController::class, 'list'])->name('suplaire.list');
-// Route::get('/backend/add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
-// Route::get('/backend/add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
 
 // Route::get('/backend/review', [RivewController::class, 'list'])->name('wishlist.list');
 
