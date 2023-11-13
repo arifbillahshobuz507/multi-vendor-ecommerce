@@ -13,7 +13,7 @@ class OrderController extends Controller
     public function orderList()
     {
       return view("backend.pages.orders.list");
-    } 
+    }
     public function see(Request $request){
       dd($request->all());
      }
