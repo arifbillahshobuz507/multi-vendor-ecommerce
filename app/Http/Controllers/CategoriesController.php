@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class CategoriesController extends Controller
 {
-    public function list()
+    public function category_list()
     {
         return view("backend.pages.category.category");
         // dd('hello');
@@ -33,5 +33,12 @@ class CategoriesController extends Controller
             'image'=>$request->image,
             'descripton'=>$request->descripton
         ]);
+    }
+
+    // SubCategory
+    public function subcategory_list()
+    {
+        return view("backend.pages.subcategory.list");
+        // dd('hello');
     }
 }

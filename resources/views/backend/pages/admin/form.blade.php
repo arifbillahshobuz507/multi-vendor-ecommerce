@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Image</label>
-                <input type="file" name="abc" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>

@@ -44,15 +44,15 @@ class AdminController extends Controller
     if ($validate->fails()) {
       return redirect()->back()->withErrors($validate);
     }
-    // dd('hello');  
+    // dd('hello');
     $fileName = null;
-    if ($request->hasFile('abc')) 
+    if ($request->hasFile('image')) 
     {
       $file = $request->file('image');
       $fileName = date('Ymdhis') . '.' . $file->getClientOriginalExtension();
       // $destination = "uploads";
       // $file->move($destination, $fileName);
-      
+
       $file->move("uploads", $fileName);
 
     }

@@ -27,7 +27,7 @@ class UserController extends Controller
         $filter = $request->only('email','password');
         $login = auth()->attempt($filter);
         if($login){
-            return redirect()->route('home');
+            return redirect()->route('backend.home');
             // return redirect()->route('dashboard');
         }
         return redirect()->back()->withErrors($login);

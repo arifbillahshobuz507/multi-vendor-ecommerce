@@ -22,37 +22,37 @@
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('subcategory.list')}}">
                     Sub Category
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('brand.list')}}">
                     Brand
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('product.list')}}">
                     Product
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="">
                     Cart
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('order.list')}}">
                     Order
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('orderdetails.list')}}">
                     Order Details
                 </a>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('payment.list')}}">
                     Payment
                 </a>
             </div>
