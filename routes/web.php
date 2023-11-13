@@ -14,58 +14,72 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UserController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
+
+// frontend routes
+
+
+// Home page
+Route::get('/', [AdminController::class, 'forntendHomePage'])->name('home');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// backend routes
 
 // authentication
 
-Route::get('/login/form',[UserController::class , 'loginform'])->name('login.form');
-Route::post('/login-form-post',[UserController::class , 'loginpost'])->name('login.form.post');
+Route::group(['prefix'=>'backend'], function()
+{
+    Route::get('/login/form',[UserController::class , 'loginform'])->name('login.form');
+    Route::post('/login-form-post',[UserController::class , 'loginpost'])->name('login.form.post');
 
-Route::group(['middleware'=>'auth'], function(){
-Route::get('/logout',[UserController::class , 'logout'])->name('logout');
+    Route::group(['middleware'=>'auth'], function()
+    {
+        // admin dashbord || backend dashbord
+        Route::get('/dashbord', [AdminController::class, 'backendHomePage'])->name('backend.home');
 
-Route::get('/', [AdminController::class, 'forntendHomePage'])->name('home');
-Route::get('/backend/home', [AdminController::class, 'backendHomePage'])->name('backend.home');
+        // admin control
+        Route::get('/admin', [AdminController::class, 'list'])->name('admin.list');
+        Route::get('/add/users', [AdminController::class, 'form'])->name('add.users');
+        Route::post('/user/store', [AdminController::class, 'store'])->name('sotre.users');
 
+        // customer control
+        Route::get('/customer/list', [CustomerController::class, 'list'])->name('customer.list');
+        Route::get('/customer/from', [CustomerController::class, 'from'])->name('add.customer');
+        Route::post('/customer/store', [CustomerController::class, 'store'])->name('sotre.customer');
 
-// admin control
-Route::get('/backend/admin', [AdminController::class, 'list'])->name('admin.list');
-Route::get('/backend/add/users', [AdminController::class, 'form'])->name('add.users');
-Route::post('/backend/user/store', [AdminController::class, 'store'])->name('sotre.users');
-
-// store control
-Route::get('/backend/store', [StoreController::class, 'list'])->name('store.list');
-
-// customer control
-Route::get('/customer/list', [CustomerController::class, 'list'])->name('customer.list');
-Route::get('/customer/from', [CustomerController::class, 'from'])->name('add.customer');
-Route::post('/customer/store', [CustomerController::class, 'store'])->name('sotre.customer');
-
-
-// category cnotrol
-Route::get('/backend/categori', [CategoriesController::class, 'list'])->name('category.list');
-Route::get('/backendRoute/add/categories', [CategoriesController::class, 'form'])->name('add.categories');
-Route::post('/backend/stor/categories', [CategoriesController::class, 'store'])->name('stor.categories');
-
-// Route::get('/backend/categori', [CategoriesController::class, 'list'])->name('subcategory.list');
+        // category cnotrol
+        Route::get('/categori', [CategoriesController::class, 'list'])->name('category.list');
+        Route::get('/add/categories', [CategoriesController::class, 'form'])->name('add.categories');
+        Route::post('/stor/categories', [CategoriesController::class, 'store'])->name('stor.categories');
 
 
 
 
 
-
-
-
-
+        // backend Logout
+    });
+    Route::get('/fjsafhius',[UserController::class , 'logout'])->name('logout');
 
 });
 
@@ -77,33 +91,12 @@ Route::post('/backend/stor/categories', [CategoriesController::class, 'store'])-
 
 
 
+// store control
+Route::get('/store', [StoreController::class, 'list'])->name('store.list');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Route::get('/backend/categori', [CategoriesController::class, 'list'])->name('subcategory.list');
 
 
 

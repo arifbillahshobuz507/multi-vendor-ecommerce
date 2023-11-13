@@ -3,7 +3,7 @@
 
 <head>
     <!-- Design by foolishdeveloper.com -->
-    <title>Glassmorphism login Form Tutorial in html css</title>
+    <title>Admin Login</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -157,13 +157,13 @@
         <h3>Login Here</h3>
 
         <label for="username">Email</label>
-        <input name="email" type="text" placeholder="Email or Phone" id="username">
+        <input name="email" type="text" placeholder="Email or Phone" id="username" required>
         @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
         <label for="password">Password</label>
-        <input name="password" type="password" placeholder="Password" id="password" required>
+        <input name="password" type="password" placeholder="Password" id="password" required >
         @error('password')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
