@@ -1,0 +1,43 @@
+@extends('backend.master')
+@section('content')
+    <main class="fluid ">
+        <div class="container col-6">
+            <h2>
+                Input your Sub Category Information!
+            </h2>
+            <hr>
+            <form action="{{ route('store.subcategory') }}" method="post" class="mt-5" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <label class="mt-2" for="exampleInputEmail1">Sub Category Name</label>
+                    <input type="text" name="sub_category_name" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Enter Your Sub Category Name" required>
+                </div>
+                @error('sub_category_name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                <div class="form-group">
+                    <label class="mt-2" for="exampleInputEmail1">Image</label>
+                    <input type="file" name="image" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" >
+                </div>
+                <div class="form-group">
+                    <label class="mt-2" for="exampleInputEmail1">Category Id</label>
+                    <select class="form-control" name="category_id" required>
+                        <option value="sfas">safioafi</option>
+                        <option value="sfas">fsdf</option>
+                        <option value="sfas">sasdfsdfioafi</option>
+                    </select>
+                </div>
+                @error('category_id')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+                <div class="form-group">
+                    <label class="mt-2" for="exampleInputEmail1">Dresscription</label>
+                    <textarea name="descripton" class="form-control" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            </form>
+        </div>
+    </main>
+@endsection

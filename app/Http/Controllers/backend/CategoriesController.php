@@ -51,7 +51,38 @@ class CategoriesController extends Controller
     // SubCategory
     public function subcategory_list()
     {
+        //dd('hello');
         return view("backend.pages.subcategory.list");
-        // dd('hello');
+    }
+    public function subcategory_from()
+    {
+//        dd('hello');
+        return view("backend.pages.subcategory.form");
+    }
+    public function subcategory_store (Request $request)
+    {
+        //dd($request->all());
+        $validate = Validator::make($request->all(), [
+            'sub_category_name' => 'required',
+            'category_id' => 'required'
+        ]);
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate);
+        }
+        //dd($request->all());
+        $fileName = null;
+        if ($request->hasFile('image')){
+            $file = $request->file('image');
+            $fileName = date('Ymdhis'). ".". $file->getClientOriginalName();
+            $file->storeAs('/subCategory/image', $fileName);
+        }
+//        dd($request->all());
+        Category::create([
+            'sub_category_name'=>$request->sub_category_name,
+            'image'=>$fileName,
+            'descripton'=>$request->descripton
+        ]);
+        //dd($request->all());
+        return redirect()->route('category.list');
     }
 }

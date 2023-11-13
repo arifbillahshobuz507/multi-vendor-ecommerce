@@ -20,7 +20,7 @@ class AdminController extends Controller
   }
   public function list()
   {
-    $admins = Admin::paginate(20);
+    $admins = Admin::paginate(3);
     return view("backend.pages.admin.list",compact('admins'));
   }
   public function form()

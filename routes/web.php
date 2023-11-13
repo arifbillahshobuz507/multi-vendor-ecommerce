@@ -47,7 +47,9 @@ Route::group(['prefix'=>'backend'], function()
         Route::post('/stor/categories', [CategoriesController::class, 'store'])->name('stor.categories');
 
         // SubCategory
-        Route::get('/subcategori/list', [CategoriesController::class, 'subcategory_list'])->name('subcategory.list');
+        Route::get('/subCategori/list', [CategoriesController::class, 'subcategory_list'])->name('subcategory.list');
+        Route::get('/subCategori/from', [CategoriesController::class, 'subcategory_from'])->name('add.subcategory');
+        Route::post('/subCategori/store', [CategoriesController::class, 'subcategory_store'])->name('store.subcategory');
 
         // Store || Shop Routes
         Route::get('/backend/suplaier', [SuplaireController::class, 'list'])->name('suplaire.list');
