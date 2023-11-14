@@ -23,9 +23,9 @@
                 <div class="form-group">
                     <label class="mt-2">Category Id</label>
                     <select class="form-control" name="category_id" required>
-                        <option value="sfass">1</option>
-                        <option value="sfas">2</option>
-                        <option value="sfsdsdas">sshfdk</option>
+                        <option value="1">I</option>
+                        <option value="2">Love</option>
+                        <option value="3">You</option>
                     </select>
                 </div>
                 @error('category_id')

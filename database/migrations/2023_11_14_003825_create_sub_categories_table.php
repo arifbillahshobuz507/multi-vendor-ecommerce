@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('sub_category_name');
             $table->string('image')->nullable();
-            $table->unsignedInteger('category_id');
+            $table->integer('category_id');
             $table->string('descripton')->nullable();
             $table->timestamps();
         });

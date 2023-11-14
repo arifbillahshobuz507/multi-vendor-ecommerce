@@ -12,8 +12,9 @@ class SubCategoryController extends Controller
 {
     public function subcategory_list()
     {
-        //dd('hello');
-        return view("backend.pages.subcategory.list");
+        $subcategories = SubCategory::paginate(3);
+//        dd($subcategories);
+        return view("backend.pages.subcategory.list", compact('subcategories'));
     }
     public function subcategory_from()
     {
@@ -44,7 +45,7 @@ class SubCategoryController extends Controller
             'category_id'=>$request->category_id,
             'descripton'=>$request->descripton
              ]);
-        dd($request->all());
-        return redirect()->route('category.list');
+//        dd($request->all());
+        return redirect()->route('subcategory.list');
     }
 }
