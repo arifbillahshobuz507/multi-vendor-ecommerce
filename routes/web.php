@@ -9,6 +9,7 @@ use App\Http\Controllers\backend\PaymentController;
 use App\Http\Controllers\backend\ProdutController;
 use App\Http\Controllers\backend\SuplaireController;
 use App\Http\Controllers\backend\UserController;
+use App\Http\Controllers\backend\SubCategoryController;
 use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,9 +48,9 @@ Route::group(['prefix'=>'backend'], function()
         Route::post('/stor/categories', [CategoriesController::class, 'store'])->name('stor.categories');
 
         // SubCategory
-        Route::get('/subCategori/list', [CategoriesController::class, 'subcategory_list'])->name('subcategory.list');
-        Route::get('/subCategori/from', [CategoriesController::class, 'subcategory_from'])->name('add.subcategory');
-        Route::post('/subCategori/store', [CategoriesController::class, 'subcategory_store'])->name('store.subcategory');
+        Route::get('/subCategori/list', [SubcategoryController::class, 'subcategory_list'])->name('subcategory.list');
+        Route::get('/subCategori/from', [SubcategoryController::class, 'subcategory_from'])->name('add.subcategory');
+        Route::post('/subCategori/store', [SubcategoryController::class, 'subcategory_store'])->name('store.subcategory');
 
         // Store || Shop Routes
         Route::get('/backend/suplaier', [SuplaireController::class, 'list'])->name('suplaire.list');

@@ -10,23 +10,22 @@
                 @csrf
                 <div class="form-group">
                     <label class="mt-2" for="exampleInputEmail1">Sub Category Name</label>
-                    <input type="text" name="sub_category_name" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Enter Your Sub Category Name" required>
+                    <input type="text" name="sub_category_name" class="form-control"
+                       placeholder="Enter Your Sub Category Name" required>
                 </div>
                 @error('sub_category_name')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="form-group">
                     <label class="mt-2" for="exampleInputEmail1">Image</label>
-                    <input type="file" name="image" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" >
+                    <input type="file" name="image" class="form-control" >
                 </div>
                 <div class="form-group">
                     <label class="mt-2" for="exampleInputEmail1">Category Id</label>
                     <select class="form-control" name="category_id" required>
-                        <option value="sfas">safioafi</option>
-                        <option value="sfas">fsdf</option>
-                        <option value="sfas">sasdfsdfioafi</option>
+                        <option value="sfas">1</option>
+                        <option value="sfas">2</option>
+                        <option value="sfas">sshfdk</option>
                     </select>
                 </div>
                 @error('category_id')
