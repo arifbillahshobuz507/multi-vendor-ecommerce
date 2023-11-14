@@ -21,11 +21,11 @@
                     <input type="file" name="image" class="form-control" >
                 </div>
                 <div class="form-group">
-                    <label class="mt-2">Category Id</label>
+                    <label class="mt-2">Category Name</label>
                     <select class="form-control" name="category_id" required>
-                        <option value="1">I</option>
-                        <option value="2">Love</option>
-                        <option value="3">You</option>
+                        @foreach($categories as $category)
+                        <option value="1">{{$category->category_name}}</option>
+                        @endforeach
                     </select>
                 </div>
                 @error('category_id')

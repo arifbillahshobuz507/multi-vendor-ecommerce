@@ -11,6 +11,9 @@
 <div>
     <h1>SubCategory list</h1>
     <hr>
+    <a href="{{route('add.subcategory')}}">
+        <button type="button" class="btn btn-success">Add Sub Categories</button>
+    </a>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -23,17 +26,23 @@
         </tr>
         </thead>
         <tbody>
+        @foreach($subcategories as $category)
         <tr>
-            <th scope="row">3</th>
-            <td>Dairy</td>
-            <td>#5b9d2 #9cfd</td>
-            <td>60</td>
+            <th scope="row">{{$category->id}}</th>
+            <td>{{$category->id}}</td>
+            <td>{{$category->sub_category_name}}</td>
+            <td>
+                <img width="10%" src="{{url('/subCategory/image/' . $category->image)}}">
+            </td>
+            <td>{{$category->category_id}}</td>
+            <td>{{$category->descripton}}</td>
+            <td>{{$category->id}}</td>
         </tr>
+        @endforeach
         </tbody>
     </table>
-    <a href="{{route('add.subcategory')}}">
-        <button type="button" class="btn btn-success">Add Categories</button>
-    </a>
+    {{ $subcategories->links() }}
+
 </div>
 </body>
 </html>

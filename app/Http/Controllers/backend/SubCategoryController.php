@@ -18,8 +18,9 @@ class SubCategoryController extends Controller
     }
     public function subcategory_from()
     {
-//        dd('hello');
-        return view("backend.pages.subcategory.form");
+        $categories = Category::all();
+//        dd($categories);
+        return view("backend.pages.subcategory.form", compact('categories'));
     }
     public function subcategory_store (Request $request)
     {
