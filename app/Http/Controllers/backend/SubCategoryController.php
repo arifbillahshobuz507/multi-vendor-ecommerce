@@ -38,13 +38,13 @@ class SubCategoryController extends Controller
             $file->storeAs('/subCategory/image', $fileName);
         }
 //        dd($request->all());
-        SubCategory::create([
+             SubCategory::create([
             'sub_category_name'=>$request->sub_category_name,
             'image'=>$fileName,
             'category_id'=>$request->category_id,
             'descripton'=>$request->descripton
-        ]);
-        //dd($request->all());
+             ]);
+        dd($request->all());
         return redirect()->route('category.list');
     }
 }

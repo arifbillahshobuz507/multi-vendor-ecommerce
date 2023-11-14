@@ -9,7 +9,7 @@
             <form action="{{ route('store.subcategory') }}" method="post" class="mt-5" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label class="mt-2" for="exampleInputEmail1">Sub Category Name</label>
+                    <label class="mt-2">Sub Category Name</label>
                     <input type="text" name="sub_category_name" class="form-control"
                        placeholder="Enter Your Sub Category Name" required>
                 </div>
@@ -17,23 +17,23 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="form-group">
-                    <label class="mt-2" for="exampleInputEmail1">Image</label>
+                    <label class="mt-2">Image</label>
                     <input type="file" name="image" class="form-control" >
                 </div>
                 <div class="form-group">
-                    <label class="mt-2" for="exampleInputEmail1">Category Id</label>
+                    <label class="mt-2">Category Id</label>
                     <select class="form-control" name="category_id" required>
-                        <option value="sfas">1</option>
+                        <option value="sfass">1</option>
                         <option value="sfas">2</option>
-                        <option value="sfas">sshfdk</option>
+                        <option value="sfsdsdas">sshfdk</option>
                     </select>
                 </div>
                 @error('category_id')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="form-group">
-                    <label class="mt-2" for="exampleInputEmail1">Dresscription</label>
-                    <textarea name="descripton" class="form-control" id="" cols="30" rows="10"></textarea>
+                    <label class="mt-2">Dresscription</label>
+                    <textarea name="descripton" class="form-control" id="" cols="10" rows="5"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>
             </form>
