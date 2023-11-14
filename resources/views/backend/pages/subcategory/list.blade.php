@@ -22,23 +22,20 @@
             <th scope="col">Image</th>
             <th scope="col">Categori Id</th>
             <th scope="col">Pomo Code</th>
-            <th scope="col">Description</th>
         </tr>
         </thead>
-        <tbody>
-        @foreach($subcategories as $category)
-        <tr>
-            <th scope="row">{{$category->id}}</th>
-            <td>{{$category->id}}</td>
-            <td>{{$category->sub_category_name}}</td>
-            <td>
-                <img width="10%" src="{{url('/subCategory/image/' . $category->image)}}">
-            </td>
-            <td>{{$category->category_id}}</td>
-            <td>{{$category->descripton}}</td>
-            <td>{{$category->id}}</td>
-        </tr>
-        @endforeach
+        <tbody class="col-12">
+            @foreach($subcategories as $category)
+            <tr>
+                <th class="col-2" scope="row">{{$category->id}}</th>
+                <td class="col-2">{{$category->sub_category_name}}</td>
+                <td class="col-3">
+                    <img width="20%" height="60" src="{{url('/subCategory/image/' . $category->image)}}">
+                </td>
+                <td class="col-2">{{$category->category_id}}</td>
+                <td class="col-2">456fsd</td>
+            </tr>
+            @endforeach
         </tbody>
     </table>
     {{ $subcategories->links() }}
