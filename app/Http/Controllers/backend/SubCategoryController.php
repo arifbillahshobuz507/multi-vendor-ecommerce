@@ -12,9 +12,10 @@ class SubCategoryController extends Controller
 {
     public function subcategory_list()
     {
+        $categories = Category::with('category')->all();
         $subcategories = SubCategory::paginate(3);
 //        dd($subcategories);
-        return view("backend.pages.subcategory.list", compact('subcategories'));
+        return view("backend.pages.subcategory.list", compact('subcategories','categories'));
     }
     public function subcategory_from()
     {

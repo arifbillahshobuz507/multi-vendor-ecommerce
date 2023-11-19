@@ -32,7 +32,7 @@
                 <td class="col-3">
                     <img width="20%" height="60" src="{{url('/subCategory/image/' . $category->image)}}">
                 </td>
-                <td class="col-2">{{$category->category_id}}</td>
+                <td class="col-2">{{$category->categories->id}}</td>
                 <td class="col-2">456fsd</td>
             </tr>
             @endforeach

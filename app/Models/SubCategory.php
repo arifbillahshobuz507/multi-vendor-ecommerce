@@ -10,6 +10,6 @@ class SubCategory extends Model
     use HasFactory;
     protected $guarded=[];
     public function category(){
-
+        $this->belongsTo(Category::class);
     }
 }
