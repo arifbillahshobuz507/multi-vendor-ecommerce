@@ -132,7 +132,7 @@
                     }
                 }
             </style>
-          
+
             <script>
                 class AnnouncementBar extends HTMLElement {
                     constructor() {
@@ -1227,7 +1227,7 @@
                                                     src="//new-ella-demo.myshopify.com/cdn/shop/t/179/assets/jquery.currencies.min.js?v=120275459928325063041695632258"
                                                     type="text/javascript"></script>
                                                 <script>
-                                                    // Pick your format here:  
+                                                    // Pick your format here:
                                                     // Can be 'money_format' or 'money_with_currency_format'
                                                     Currency.format = 'money_format';
                                                     var shopCurrency = 'USD';
@@ -1241,12 +1241,12 @@
 
                                                     var cookieCurrency = Currency.cookie.read();
 
-                                                    // Fix for customer account pages 
+                                                    // Fix for customer account pages
                                                     $('span.money span.money').each((index, element) => {
                                                         $(element).parent('span.money').removeClass('money');
                                                     });
 
-                                                    // Add precalculated shop currency to data attribute 
+                                                    // Add precalculated shop currency to data attribute
                                                     $('span.money').each((index, element) => {
                                                         $(element).attr('data-currency-USD', $(element).html());
                                                     });
@@ -1372,8 +1372,10 @@
                                                         <div class="container" style="--container_size: 1670px">
                                                             <div
                                                                 class="menu-dropdown__wrapper d-flex flex-wrap flex-align-stretch flex-jc-between">
-                                                                <div class="nav-title-mobile text-center"><span
-                                                                        class="icon-dropdown"><svg aria-hidden="true"
+                                                                <div class="nav-title-mobile text-center">
+                                                                    <span
+                                                                        class="icon-dropdown">
+                                                                        <svg aria-hidden="true"
                                                                             focusable="false" data-prefix="fal"
                                                                             data-icon="long-arrow-left" role="img"
                                                                             xmlns="http://www.w3.org/2000/svg"
@@ -1381,8 +1383,11 @@
                                                                             class="icon-arrow-nav">
                                                                             <path fill="currentColor"
                                                                                 d="M136.97 380.485l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113l83.928-83.444c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0l-116.485 116c-4.686 4.686-4.686 12.284 0 16.971l116.485 116c4.686 4.686 12.284 4.686 16.97-.001z"
-                                                                                class=""></path>
-                                                                        </svg></span>Theme Demo</div>
+                                                                                class="">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </span>gjksldfk
+                                                                    </div>
                                                                 <div class="site-nav navigation_all_mobile d-none">
                                                                     <div class="site-nav-list "><a href="/"
                                                                             class="site-nav-title menu-lv-2"><span>Go to
@@ -18749,7 +18754,7 @@
                                             "@context": "http://schema.org",
                                             "@type": "Organization",
                                             "name": "new-ella-demo",
-                                            
+
                                             "sameAs": [
                                                 "https:\/\/twitter.com\/shopify",
                                                 "https:\/\/www.facebook.com\/shopify",

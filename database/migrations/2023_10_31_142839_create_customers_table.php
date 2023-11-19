@@ -15,9 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('image')->nullable;
             $table->string('gmail')->unique();
+            $table->integer('phone');
             $table->string('password');
-            $table->unsignedInteger('phone');
+            $table->string('date_of_birth');
+            $table->string('address');
+            $table->string('gender');
             $table->timestamps();
         });
     }

@@ -10,10 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
-  public function forntendHomePage()
-  {
-    echo view("forntend.home.index");
-  }
+
   public function backendHomePage()
   {
     echo view("backend.home.index");

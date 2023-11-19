@@ -46,18 +46,21 @@
                 <label for="exampleInputEmail1">Date of Birth</label>
                 <input type="date" name="birth_day" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
-            @error('email')
+            @error('birth_day')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Address</label>
                 <input type="text" name="address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
+            @error('address')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Image</label>
                 <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
-            @error('email')
+            @error('image')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
@@ -67,7 +70,7 @@
                     <option value="femail">femail</option>
                 </select>
             </div>
-            @error('email')
+            @error('gender')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <button type="submit" class="btn btn-primary mt-2">Submit</button>

@@ -10,7 +10,10 @@ use App\Http\Controllers\backend\ProdutController;
 use App\Http\Controllers\backend\SuplaireController;
 use App\Http\Controllers\backend\UserController;
 use App\Http\Controllers\backend\SubCategoryController;
-use App\Http\Controllers\SellerController;
+
+use App\Http\Controllers\frontend\HomeController;
+
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 
 // Home page
-Route::get('/', [AdminController::class, 'forntendHomePage'])->name('home');
+Route::get('/', [HomeController::class, 'forntendHomePage'])->name('home');
+
 
 
 // backend routes
