@@ -45,9 +45,9 @@
           <td>{{$customer->phone}}</td>
           <td>{{$customer->gender}}</td>
           <td>
-            <a href="#">View</a>
-            <a href="#">Edit</a>
-            <a href="#">Delet</a>
+            <a class="btn btn-success" href="#">View</a>
+            <a class="btn btn-success" href="#">Edit</a>
+            <a class="btn btn-danger" href="#">Delet</a>
           </td>
         </tr>
         @endforeach
