@@ -49,8 +49,8 @@
           <td>{{$product->release_data}}</td>
           <td>
               <a class="btn btn-success" href="">View</a>
-              <a class="btn btn-success" href="">Edit</a>
-              <a class="btn btn-success" href="">Delet</a>
+              <a class="btn btn-success" href="{{route('edite.product',$product->id)}}">Edit</a>
+              <a class="btn btn-success" href="{{route('delete.product',$product->id)}}">Delet</a>
           </td>
         </tr>
       @endforeach

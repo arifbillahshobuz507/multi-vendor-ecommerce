@@ -69,6 +69,8 @@ Route::group(['prefix'=>'backend'], function()
         // Product Routes
         Route::get('/products', [ProdutController::class, 'list'])->name('product.list');
         Route::get('/add/products', [ProdutController::class, 'form'])->name('add.product');
+        Route::get('/delete/products/{id}', [ProdutController::class, 'delete'])->name('delete.product');
+        Route::get('/edit/products/{id}', [ProdutController::class, 'edit'])->name('edite.product');
         Route::post('/store/products', [ProdutController::class, 'store'])->name('store.products');
 
         // Orders Routes

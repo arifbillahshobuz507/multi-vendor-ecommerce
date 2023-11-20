@@ -14,20 +14,21 @@ class ProdutController extends Controller
 {
     public function list()
     {
-        $products = Product::with(['category','subcategory','brand'])->paginate(2);
-//        dd($products);
-      return view("backend.pages.products.list", compact('products'));
+        $products = Product::with(['category', 'subcategory', 'brand'])->paginate(2);
+        //        dd($products);
+        return view("backend.pages.products.list", compact('products'));
     }
     public function form()
     {
         $categories = Category::all();
-        $subcategories = SubCategory ::all();
+        $subcategories = SubCategory::all();
         $brands = Brand::all();
-//        dd($categories);
-      return view("backend.pages.products.form", compact(['categories','subcategories','brands']));
+        //        dd($categories);
+        return view("backend.pages.products.form", compact(['categories', 'subcategories', 'brands']));
     }
-    public function store(Request $request){
-//      dd($request->all());
+    public function store(Request $request)
+    {
+        //      dd($request->all());
         $validate = Validator::make($request->all(), [
             'product_name' => 'required',
             'category_id' => 'required',
@@ -40,26 +41,43 @@ class ProdutController extends Controller
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate);
         }
-//         dd($validate);
+        //         dd($validate);
         $fileName = null;
-        if ($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $file = $request->file('image');
             $fileName = date('Ymdhis') . '.' . $file->getClientOriginalExtension();
             $file->move("product/image", $fileName);
-
         }
         Product::create([
-            'name'=>$request->product_name,
-            'category_id'=>$request->category_id,
-            'subcategory_id'=>$request->subcategory_id,
-            'brand_id'=>$request->brand_id,
-            'release_data'=>$request->release_data,
-            'quantity'=>$request->quantity,
-            'price'=>$request->price,
-            'image'=>$fileName,
-            'descripton'=>$request->descripton
+            'name' => $request->product_name,
+            'category_id' => $request->category_id,
+            'subcategory_id' => $request->subcategory_id,
+            'brand_id' => $request->brand_id,
+            'release_data' => $request->release_data,
+            'quantity' => $request->quantity,
+            'price' => $request->price,
+            'image' => $fileName,
+            'descripton' => $request->descripton
         ]);
         return redirect()->route('product.list');
-     }
+    }
+    public function delete($id)
+    {
+        $products = Product::find($id);
+        // dd($products);
+        if ($products) {
+            $products->delete();
+            return redirect()->route('product.list');
+        }
+    }
+    public function edit($id)
+    {
+        // dd('welcome edite file');        
+        $categories = Category::all();
+        $subcategories = SubCategory::all();
+        $brands = Brand::all();
+        $product = Product::find($id);
+        // dd([ $categories ,$subcategories,$brands,$products]);
+        return view('backend.pages.products.edit', compact(['categories', 'subcategories', 'brands', 'product']));
+    }
 }
