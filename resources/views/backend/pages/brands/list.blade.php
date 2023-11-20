@@ -26,7 +26,7 @@
         @foreach($brands as $brand)
         <tr>
           <th scope="row">{{$brand->id}}</th>
-          <td>{{$brand->id}}</td>
+          <td>{{$brand->name}}</td>
           <td>
             <img class="border border-warning rounded-pill" width="110" height="50" src="{{url('brands/image/' . $brand->image)}}" alt="">
           </td>

@@ -20,8 +20,8 @@
             <th scope="col">No</th>
             <th scope="col">Sub Categori Name</th>
             <th scope="col">Image</th>
-            <th scope="col">Categori Id</th>
-            <th scope="col">Pomo Code</th>
+            <th scope="col">Categori Name</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody class="col-12">
@@ -33,7 +33,11 @@
                     <img width="20%" height="60" src="{{url('/subCategory/image/' . $subcategory->image)}}">
                 </td>
                 <td class="col-2">{{$subcategory->category->name}}</td>
-                <td class="col-2">456fsd</td>
+                <td class="col-2">
+                    <a class="btn btn-secondary" href="#">View</a>
+                    <a class="btn btn-success" href="#">Edit</a>
+                    <a class="btn btn-danger" href="#">Delete</a>
+                </td>
             </tr>
             @endforeach
         </tbody>

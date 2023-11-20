@@ -31,7 +31,7 @@
                 <td class="col-4">
                     <img width="100" src="{{url('category/image/' .$category->image)}}">
                 </td>
-              <td class="col-4">{{$category->category_name}}</td>
+              <td class="col-4">{{$category->name}}</td>
             </tr>
           @endforeach
 

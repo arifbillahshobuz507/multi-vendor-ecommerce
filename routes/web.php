@@ -57,9 +57,9 @@ Route::group(['prefix'=>'backend'], function()
         Route::post('/subCategori/store', [SubcategoryController::class, 'subcategory_store'])->name('store.subcategory');
 
         // Store || Shop Routes
-        Route::get('/backend/suplaier', [SuplaireController::class, 'list'])->name('suplaire.list');
-        Route::get('/backend/add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
-        Route::get('/backend/add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
+        Route::get('suplaier', [SuplaireController::class, 'list'])->name('suplaire.list');
+        Route::get('add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
+        Route::get('add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
 
         // Brands Routes
         Route::get('/brand/list', [BrandsController::class, 'list'])->name('brand.list');
@@ -67,22 +67,22 @@ Route::group(['prefix'=>'backend'], function()
         Route::post('/stor/brands', [BrandsController::class, 'stor'])->name('sotre.brand');
 
         // Product Routes
-        Route::get('/backend/products', [ProdutController::class, 'list'])->name('product.list');
-        Route::get('/backend/add/products', [ProdutController::class, 'form'])->name('add.products');
-        Route::get('/backend/add/products', [ProdutController::class, 'form'])->name('add.products');
+        Route::get('/products', [ProdutController::class, 'list'])->name('product.list');
+        Route::get('/add/products', [ProdutController::class, 'form'])->name('add.product');
+        Route::post('/store/products', [ProdutController::class, 'store'])->name('store.products');
 
         // Orders Routes
-        Route::get('/backend/order/list', [OrderController::class, 'list'])->name('order.list');
-        Route::get('/backend/add/order', [OrderController::class, 'orderList'])->name('add.orders');
-        Route::get('/backend/see/order', [OrderController::class, 'seeorderList'])->name('see.orders');
+        Route::get('/order/list', [OrderController::class, 'list'])->name('order.list');
+        Route::get('/add/order', [OrderController::class, 'orderList'])->name('add.orders');
+        Route::post('/see/order', [OrderController::class, 'seeorderList'])->name('see.orders');
 
          // OrderDetails Routes
-         Route::get('/backend/orderdetails', [OrderController::class, 'list'])->name('orderdetails.list');
+         Route::get('/orderdetails', [OrderController::class, 'list'])->name('orderdetails.list');
 
         // Payment Routes
-        Route::get('/backend/payment', [PaymentController::class, 'list'])->name('payment.list');
-        Route::get('/backend/see/payment', [PaymentController::class, 'paymentList'])->name('see.payments');
-        Route::get('/backend/see/payment', [PaymentController::class, 'seepayments'])->name('see.payments');
+        Route::get('/payment', [PaymentController::class, 'list'])->name('payment.list');
+        Route::get('/see/payment', [PaymentController::class, 'paymentList'])->name('see.payments');
+        Route::get('/see/payment', [PaymentController::class, 'seepayments'])->name('see.payments');
 
 
         // backend Logout
