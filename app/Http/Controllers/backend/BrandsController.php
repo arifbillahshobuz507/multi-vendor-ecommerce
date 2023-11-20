@@ -36,7 +36,7 @@ class BrandsController extends Controller
         $file->move("brands/image", $fileName);  
       }
       Brand::create([
-        'brand_name' => $request->brand_name,
+        'name' => $request->brand_name,
         'image' => $fileName,  
         'description'=>$request->description
       ]);

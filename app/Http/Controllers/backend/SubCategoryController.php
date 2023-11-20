@@ -12,20 +12,19 @@ class SubCategoryController extends Controller
 {
     public function subcategory_list()
     {
-        $categories = Category::with('category')->all();
-        $subcategories = SubCategory::paginate(3);
-//        dd($subcategories);
-        return view("backend.pages.subcategory.list", compact('subcategories','categories'));
+        $subcategories = SubCategory::with('category')->paginate(2);
+        // dd($subcategories);
+        return view("backend.pages.subcategory.list", compact('subcategories'));
     }
     public function subcategory_from()
     {
         $categories = Category::all();
-//        dd($categories->id);
+        //dd($categories->id);
         return view("backend.pages.subcategory.form", compact('categories'));
     }
-    public function subcategory_store (Request $request)
+    public function subcategory_store(Request $request)
     {
-//        dd($request->all());
+        //dd($request->all());
         $validate = Validator::make($request->all(), [
             'sub_category_name' => 'required',
             'category_id' => 'required'
@@ -35,19 +34,19 @@ class SubCategoryController extends Controller
         }
         //dd($request->all());
         $fileName = null;
-        if ($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             $file = $request->file('image');
-            $fileName = date('Ymdhis'). ".".$file->getClientOriginalExtension();
+            $fileName = date('Ymdhis') . "." . $file->getClientOriginalExtension();
             $file->storeAs('/subCategory/image', $fileName);
         }
-//        dd($request->all());
-             SubCategory::create([
-            'sub_category_name'=>$request->sub_category_name,
-            'image'=>$fileName,
-            'category_id'=>$request->category_id,
-            'descripton'=>$request->descripton
-             ]);
-//        dd($request->all());
+        //dd($request->all());
+        SubCategory::create([
+            'category_id' => $request->category_id,
+            'name' => $request->sub_category_name,
+            'image' => $fileName,
+            'descripton' => $request->descripton
+        ]);
+        //dd($request->all());
         return redirect()->route('subcategory.list');
     }
 }

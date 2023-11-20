@@ -24,7 +24,7 @@
                     <label class="mt-2">Category Name</label>
                     <select class="form-control" name="category_id" required>
                         @foreach($categories as $category)
-                        <option value="1">{{$category->category_name}}</option>
+                        <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
                     </select>
                 </div>

@@ -39,7 +39,7 @@ class CategoriesController extends Controller
             $file->storeAs('/category/image', $fileName);
         }
         Category::create([
-            'category_name'=>$request->category_name,
+            'name'=>$request->category_name,
             'image'=>$fileName,
             'descripton'=>$request->descripton
         ]);

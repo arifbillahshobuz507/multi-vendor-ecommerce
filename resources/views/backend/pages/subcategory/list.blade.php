@@ -25,14 +25,14 @@
         </tr>
         </thead>
         <tbody class="col-12">
-            @foreach($subcategories as $category)
+            @foreach($subcategories as $subcategory)
             <tr>
-                <th class="col-2" scope="row">{{$category->id}}</th>
-                <td class="col-2">{{$category->sub_category_name}}</td>
+                <th class="col-2" scope="row">{{$subcategory->id}}</th>
+                <td class="col-2">{{$subcategory->name}}</td>
                 <td class="col-3">
-                    <img width="20%" height="60" src="{{url('/subCategory/image/' . $category->image)}}">
+                    <img width="20%" height="60" src="{{url('/subCategory/image/' . $subcategory->image)}}">
                 </td>
-                <td class="col-2">{{$category->categories->id}}</td>
+                <td class="col-2">{{$subcategory->category->name}}</td>
                 <td class="col-2">456fsd</td>
             </tr>
             @endforeach
