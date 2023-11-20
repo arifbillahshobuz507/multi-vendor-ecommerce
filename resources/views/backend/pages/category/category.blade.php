@@ -21,17 +21,23 @@
             <tr>
               <th scope="col">No</th>
               <th scope="col">Image</th>
-                <th scope="col">Categori Name</th>
+                <th scope="col">Category Name</th>
+                <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
           @foreach($categories as $category)
             <tr>
-              <th class="col-4" scope="row">{{$category->id}}</th>
-                <td class="col-4">
+              <th scope="row">{{$category->id}}</th>
+                <td >
                     <img width="100" src="{{url('category/image/' .$category->image)}}">
                 </td>
-              <td class="col-4">{{$category->name}}</td>
+              <td >{{$category->name}}</td>
+                <td>
+                    <a class="btn btn-success" href="#">View</a>
+                    <a class="btn btn-success" href="#">Edit</a>
+                    <a class="btn btn-danger" href="#">Delet</a>
+                </td>
             </tr>
           @endforeach
 

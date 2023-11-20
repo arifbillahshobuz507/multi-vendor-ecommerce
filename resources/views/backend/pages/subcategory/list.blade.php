@@ -20,7 +20,7 @@
             <th scope="col">No</th>
             <th scope="col">Sub Categori Name</th>
             <th scope="col">Image</th>
-            <th scope="col">Categori Name</th>
+            <th scope="col">Category Name</th>
             <th scope="col">Action</th>
         </tr>
         </thead>

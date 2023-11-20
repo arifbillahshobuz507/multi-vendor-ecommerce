@@ -37,14 +37,21 @@
       @foreach($products as $product)
         <tr>
           <th scope="row">{{$product->id}}</th>
-          <td>{{$product->id}}</td>
-          <td>{{$product->id}}</td>
-          <td>{{$product->id}}</td>
-          <td>{{$product->id}}</td>
-          <td>{{$product->id}}</td>
-          <td>{{$product->id}}</td>
-          <td>{{$product->id}}</td>
-          <td>{{$product->id}}</td>
+          <td>{{$product->name}}</td>
+            <td class="col-4">
+                <img width="100" src="{{url('product/image/' .$product->image)}}">
+            </td>
+          <td>{{$product->category->name}}</td>
+          <td>{{$product->subcategory->name}}</td>
+          <td>{{$product->brand->name}}</td>
+          <td>{{$product->price}}</td>
+          <td>{{$product->quantity}}</td>
+          <td>{{$product->release_data}}</td>
+          <td>
+              <a class="btn btn-success" href="">View</a>
+              <a class="btn btn-success" href="">Edit</a>
+              <a class="btn btn-success" href="">Delet</a>
+          </td>
         </tr>
       @endforeach
       </tbody>

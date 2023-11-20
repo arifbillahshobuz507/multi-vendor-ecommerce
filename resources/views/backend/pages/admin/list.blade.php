@@ -30,6 +30,7 @@
           <th scope="col">Date of Birth</th>
           <th scope="col">Address</th>
           <th scope="col">Gender</th>
+          <th scope="col">Actione</th>
         </tr>
       </thead>
       <tbody>
@@ -46,6 +47,11 @@
           <td>{{$admin->birth_day}}</td>
           <td>{{$admin->address}}</td>
           <td>{{$admin->gender}}</td>
+            <td>
+                <a class="btn btn-success" href="#">View</a>
+                <a class="btn btn-success" href="#">Edit</a>
+                <a class="btn btn-danger" href="#">Delet</a>
+            </td>
         </tr>
         @endforeach
       </tbody>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('gmail')->unique();
             $table->unsignedInteger('phone');
             $table->string('password');
+            $table->string('role')->nullable();
             $table->date('birth_day');
             $table->string('address');
             $table->string('image')->nullable();

@@ -38,10 +38,17 @@
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-            </div>
             @error('password')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Role</label>
+                <select name="gender" id="" class="form-control" required>
+                    <option value="admin">Admin</option>
+                    <option value="manage">manegar</option>
+                </select>
+            </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Date of Birth</label>
                 <input type="date" name="birth_day" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
