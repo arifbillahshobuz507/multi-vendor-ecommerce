@@ -53,7 +53,8 @@ class CustomerController extends Controller
             'password' => $request->password,
             'date_of_birth' => $request->date_of_birth,
             'address' => $request->address,
-            'gender' => $request->gender
+            'gender' => $request->gender,
+            'role' => 'customer'
         ]);
         return redirect()->route('customer.list');
     }

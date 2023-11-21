@@ -70,9 +70,9 @@ class ProdutController extends Controller
             return redirect()->route('product.list');
         }
     }
-    public function edit($id)
+    public function  ($id)
     {
-        // dd('welcome edite file');        
+        // dd('welcome edite file');
         $categories = Category::all();
         $subcategories = SubCategory::all();
         $brands = Brand::all();
@@ -80,4 +80,23 @@ class ProdutController extends Controller
         // dd([ $categories ,$subcategories,$brands,$products]);
         return view('backend.pages.products.edit', compact(['categories', 'subcategories', 'brands', 'product']));
     }
+    public function update(Request $request, $id)
+    {
+        $product = Product::find($id);
+//        dd($product);
+//        $product->name = $request->get('product_name');
+//        $product->category_id = $request->get('category_id');
+//        $product->subcategory_id = $request->get('subcategory_id');
+//        $product->brand_id = $request->get('brand_id');
+//        $product->release_data = $request->get('release_data');
+//        $product->quantity = $request->get('quantity');
+//        $product->price = $request->get('price');
+//        $product->image = $request->get('image');
+//        $product->descripton = $request->get('descripton');
+//        $product->save();
+//        return redirect()->route('product.list');
+
+
+    }
+
 }

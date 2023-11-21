@@ -10,7 +10,7 @@
                 @csrf
                 <div class="form-group">
                     <label class="mt-2" for="exampleInputEmail1">Category Name</label>
-                    <input type="text" name="category_name" class="form-control" id="exampleInputEmail1"
+                    <input type="text" name="category_name" class="form-control" id="category_name"
                         aria-describedby="emailHelp" placeholder="Enter Your Category Name">
                 </div>
                 @error('category_name')

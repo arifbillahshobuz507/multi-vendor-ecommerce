@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Role</label>
-                <select name="gender" id="" class="form-control" required>
+                <select name="role" id="" class="form-control" required>
                     <option value="admin">Admin</option>
                     <option value="manage">manegar</option>
                 </select>
@@ -65,7 +65,7 @@
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Image</label>
-                <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email">
             </div>
             @error('image')
             <div class="alert alert-danger">{{ $message }}</div>

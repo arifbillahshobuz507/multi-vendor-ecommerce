@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Description</label>
-                <input type="text" name="description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Brand type" >
+                <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
             </div>
             <button type="submit" class="btn btn-primary mt-2">Submit</button>
         </form>

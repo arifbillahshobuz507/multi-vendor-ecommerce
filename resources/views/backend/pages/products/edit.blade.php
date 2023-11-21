@@ -5,8 +5,9 @@
         <h1>
             Input your Information!
         </h1>
-        <form action="{{route('store.products')}}" class="was-validated" method="post" enctype="multipart/form-data">
+        <form action="{{route('update.products', $product->id)}}" class="was-validated" method="post" enctype="multipart/form-data">
             @csrf
+            @method('put')
             <div class="form-group">
                 <label for="name">Product Name</label>
                 <input type="text" value="{{$product->name}}" name="product_name" class="form-control"  placeholder="Enter Your Product Name" required>
@@ -15,7 +16,7 @@
                 <label class="mt-2">Category Name</label>
                 <select class="form-control" name="category_id" required>
                     @foreach($categories as $category)
-                        <option @if($product->category->id==$category->id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
+                        <option @if($product->category_id == $category->id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
                 </select>
             </div>
@@ -23,7 +24,7 @@
                 <label class="mt-2">Sub Category Name</label>
                 <select class="form-control" name="subcategory_id" required>
                     @foreach($subcategories as $subcategory)
-                        <option @if($product->subcategory_id == $subcategory_id) selected @endif value="{{$subcategory->id}}">{{$subcategory->name}}</option>
+                        <option @if ($product->subcategory_id==$subcategory->id) selected @endif value="{{$subcategory->id}}">{{$subcategory->name}}</option>
                     @endforeach
                 </select>
             </div>
@@ -49,7 +50,7 @@
             </div>
             <div class="form-group">
                 <label class="mt-2" for="exampleInputEmail1">Image</label>
-                <input type="file" name="image" class="form-control" id="image">
+                <input type="file" value="{{$product->image}}"  name="image" class="form-control" id="image">
             </div>
             <div class="form-group">
                 <label class="mt-2" for="descripton">Dresscription</label>
