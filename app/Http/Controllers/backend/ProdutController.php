@@ -70,7 +70,7 @@ class ProdutController extends Controller
             return redirect()->route('product.list');
         }
     }
-    public function  ($id)
+    public function edit($id)
     {
         // dd('welcome edite file');
         $categories = Category::all();
@@ -83,6 +83,33 @@ class ProdutController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::find($id);
+
+        if ($product){
+
+
+            $fileName=$product->image;
+            if($request->hasFile('image'))
+            {
+                $file=$request->file('image');
+                $fileName=date('Ymdhis').'.'.$file->getClientOriginalExtension();
+
+                $file->storeAs("product/image",$fileName);
+
+            }
+            $product->update([
+                'name' => $request->product_name,
+                'category_id' => $request->category_id,
+                'subcategory_id' => $request->subcategory_id,
+                'brand_id' => $request->brand_id,
+                'release_data' => $request->release_data,
+                'quantity' => $request->quantity,
+                'price' => $request->price,
+                'image'=>$fileName,
+                'descripton' => $request->descripton
+
+            ]);
+        return redirect()->route('product.list');
+        }
 //        dd($product);
 //        $product->name = $request->get('product_name');
 //        $product->category_id = $request->get('category_id');
@@ -95,8 +122,6 @@ class ProdutController extends Controller
 //        $product->descripton = $request->get('descripton');
 //        $product->save();
 //        return redirect()->route('product.list');
-
-
     }
 
 }
