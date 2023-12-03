@@ -41,6 +41,11 @@ Route::group(['prefix'=>'backend'], function()
         Route::get('/add/users', [AdminController::class, 'form'])->name('add.users');
         Route::post('/user/store', [AdminController::class, 'store'])->name('sotre.users');
 
+        Route::get('/admin/edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');
+        Route::get('/admin/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
+        Route::put('/update/admin/{id}', [AdminController::class, 'update'])->name('update.admin');
+
+
         // customer Routes
         Route::get('/customer/list', [CustomerController::class, 'list'])->name('customer.list');
         Route::get('/customer/from', [CustomerController::class, 'from'])->name('add.customer');

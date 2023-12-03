@@ -68,4 +68,29 @@ class AdminController extends Controller
     ]);
     return redirect()->route('admin.list');
   }
+  public function edit($id){
+        $admins = Admin::find($id);
+        return view('backend.pages.admin.edit',compact('admins'));
+    }
+    public function update(Request $request, $id){
+        $admins = Admin::find($id);
+//        dd($admins);
+
+        if($admins){
+            $admins->update([
+                'first_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'gmail' => $request->gmail,
+                'phone' => $request->phone,
+                'password' => $request->password,
+                'birth_day' => $request->birth_day,
+                'address' => $request->address,
+                'role' => $request->role,
+
+            ]);
+        }
+
+        return view('backend.pages.admin.edit',compact('admins'));
+    }
 }
+
