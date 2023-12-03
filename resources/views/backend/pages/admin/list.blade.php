@@ -49,8 +49,8 @@
           <td>{{$admin->gender}}</td>
             <td>
                 <a class="btn btn-success" href="#">View</a>
-                <a class="btn btn-success" href="#">Edit</a>
-                <a class="btn btn-danger" href="#">Delet</a>
+                <a class="btn btn-success" href="{{route('edit.admin',$admin->id )}}">Edit</a>
+                <a class="btn btn-danger" href="{{route('delete.admin',$admin->id )}}">Delet</a>
             </td>
         </tr>
         @endforeach
