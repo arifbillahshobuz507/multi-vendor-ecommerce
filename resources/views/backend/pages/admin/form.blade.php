@@ -5,7 +5,7 @@
         <h1>
             Input your Information!
         </h1>
-        <form action="{{route('sotre.users')}}" method="post" class="was-validated" enctype="multipart/form-data">
+        <form action="{{route('sotre.admin')}}" method="post" class="was-validated" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>

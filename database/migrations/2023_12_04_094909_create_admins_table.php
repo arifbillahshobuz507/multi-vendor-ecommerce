@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('phone', 14);
             $table->string('password', 300);
             $table->string('role')->nullable();
-            $table->string('otp', 20);
+            $table->string('otp', 20)->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

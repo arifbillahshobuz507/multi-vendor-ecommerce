@@ -18,8 +18,59 @@ class AdminController extends Controller
   public function list()
   {
     $admins = Admin::paginate(3);
-    return view("backend.pages.admin.list",compact('admins'));
+    // dd($admins);
+    return view("backend.pages.admin.list", compact('admins'));
   }
+  public function profile()
+  {
+    $admins = Admin::all();
+    // dd($admins);
+    return view("backend.pages.admin_profile.profile",compact('admins'));
+  }
+  public function edit_profile($id)
+  {
+    $admins = Admin::find($id);
+    return view('backend.pages.admin.edit', compact('admins'));
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   public function form()
   {
     return view("backend.pages.admin.form");
@@ -43,15 +94,13 @@ class AdminController extends Controller
     }
     // dd('hello');
     $fileName = null;
-    if ($request->hasFile('image'))
-    {
+    if ($request->hasFile('image')) {
       $file = $request->file('image');
       $fileName = date('Ymdhis') . '.' . $file->getClientOriginalExtension();
       // $destination = "uploads";
       // $file->move($destination, $fileName);
 
       $file->move("uploads", $fileName);
-
     }
     // dd($request->all());
     Admin::create([
@@ -68,29 +117,26 @@ class AdminController extends Controller
     ]);
     return redirect()->route('admin.list');
   }
-  public function edit($id){
-        $admins = Admin::find($id);
-        return view('backend.pages.admin.edit',compact('admins'));
+
+  public function update(Request $request, $id)
+  {
+    $admins = Admin::find($id);
+    //        dd($admins);
+
+    if ($admins) {
+      $admins->update([
+        'first_name' => $request->first_name,
+        'last_name' => $request->last_name,
+        'gmail' => $request->gmail,
+        'phone' => $request->phone,
+        'password' => $request->password,
+        'birth_day' => $request->birth_day,
+        'address' => $request->address,
+        'role' => $request->role,
+
+      ]);
     }
-    public function update(Request $request, $id){
-        $admins = Admin::find($id);
-//        dd($admins);
 
-        if($admins){
-            $admins->update([
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
-                'gmail' => $request->gmail,
-                'phone' => $request->phone,
-                'password' => $request->password,
-                'birth_day' => $request->birth_day,
-                'address' => $request->address,
-                'role' => $request->role,
-
-            ]);
-        }
-
-        return view('backend.pages.admin.edit',compact('admins'));
-    }
+    return view('backend.pages.admin.edit', compact('admins'));
+  }
 }
-

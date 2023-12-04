@@ -36,11 +36,14 @@ Route::group(['prefix'=>'backend'], function()
         Route::get('/dashbord', [AdminController::class, 'backendHomePage'])->name('backend.home');
 
         // admin Routes
-        Route::get('/admin/list', [AdminController::class, 'list'])->name('admin.list');
-        // Route::get('/add/users', [AdminController::class, 'form'])->name('add.users');
-        // Route::post('/user/store', [AdminController::class, 'store'])->name('sotre.users');
+        Route::get('/admin', [AdminController::class, 'list'])->name('admin');
+        Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
 
-        // Route::get('/admin/edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');
+
+        Route::get('/add/admin', [AdminController::class, 'form'])->name('add.admin');
+        Route::post('/admin/store', [AdminController::class, 'store'])->name('sotre.admin');
+
+        Route::get('/admin/edit/{id}', [AdminController::class, 'edit_profile'])->name('edit.admin');
         // Route::get('/admin/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
         // Route::put('/update/admin/{id}', [AdminController::class, 'update'])->name('update.admin');
 
