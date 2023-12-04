@@ -2,15 +2,11 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
-                <a class="nav-link" href="{{ route('admin.list') }}">
+                <a class="nav-link" href="{{route('admin.list')}}">
                     Admin
                 </a>
             </div>
-            <div class="nav">
-                <a class="nav-link" href="">
-                    Store
-                </a>
-            </div>
+            
             <div class="nav">
                 <a class="nav-link" href="{{ route('customer.list') }}">
                     Customer

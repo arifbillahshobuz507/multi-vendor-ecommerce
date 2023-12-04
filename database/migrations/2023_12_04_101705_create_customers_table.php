@@ -13,17 +13,13 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('image')->nullable;
-            $table->string('gmail')->unique();
-            $table->integer('phone');
-            $table->string('password');
-            $table->string('date_of_birth');
-            $table->string('address');
-            $table->string('gender');
-            $table->string('role');
-            $table->timestamps();
+            $table->string('gmail', 50)->unique();
+            $table->string('phone', 14);
+            $table->string('password', 300);
+            $table->string('role')->nullable();
+            $table->string('otp', 20);
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 

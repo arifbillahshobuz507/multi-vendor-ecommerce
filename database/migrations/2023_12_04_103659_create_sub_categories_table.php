@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('sub_categories', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id');
-            $table->string('name');
-            $table->string('image')->nullable();
-            $table->string('descripton')->nullable();
-            $table->timestamps();
+            $table->string('name', 50);
+            $table->string('image', 300)->nullable();
+            $table->longText('descripton')->nullable();
+            
+            //Relation Category
+            $table->foreignId('category_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+           
         });
     }
 

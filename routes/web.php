@@ -28,22 +28,21 @@ Route::get('/', [HomeController::class, 'forntendHomePage'])->name('home');
 // backend routes
 Route::group(['prefix'=>'backend'], function()
 {
-    Route::get('/login/form',[UserController::class , 'loginform'])->name('login.form');
-    Route::post('/login-form-post',[UserController::class , 'loginpost'])->name('login.form.post');
+    // Route::get('/login/form',[UserController::class , 'loginform'])->name('login.form');
+    // Route::post('/login-form-post',[UserController::class , 'loginpost'])->name('login.form.post');
 
-    Route::group(['middleware'=>'auth'], function()
-    {
+   
         // admin dashbord || backend dashbord Routes
         Route::get('/dashbord', [AdminController::class, 'backendHomePage'])->name('backend.home');
 
         // admin Routes
         Route::get('/admin/list', [AdminController::class, 'list'])->name('admin.list');
-        Route::get('/add/users', [AdminController::class, 'form'])->name('add.users');
-        Route::post('/user/store', [AdminController::class, 'store'])->name('sotre.users');
+        // Route::get('/add/users', [AdminController::class, 'form'])->name('add.users');
+        // Route::post('/user/store', [AdminController::class, 'store'])->name('sotre.users');
 
-        Route::get('/admin/edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');
-        Route::get('/admin/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
-        Route::put('/update/admin/{id}', [AdminController::class, 'update'])->name('update.admin');
+        // Route::get('/admin/edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');
+        // Route::get('/admin/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
+        // Route::put('/update/admin/{id}', [AdminController::class, 'update'])->name('update.admin');
 
 
         // customer Routes
@@ -95,7 +94,7 @@ Route::group(['prefix'=>'backend'], function()
 
         // backend Logout
         Route::get('/logout',[UserController::class , 'logout'])->name('admin.logout');
-    });
+    
 });
 
 

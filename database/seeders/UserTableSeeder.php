@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -13,13 +14,12 @@ class UserTableSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'email'=>'admin@gmail.com',
+        Admin::create([
+            'gmail'=>'admin@gmail.com',
+            'phone'=>'01956020255',
             'password'=>'admin',
             'role'=>'admin',
-            'first_name'=>'arifbillah',
-            'last_name'=>'arifbillah',
-            'phone'=>'01956020255'
+            'otp'=>'123',
         ]);
     }
 }
