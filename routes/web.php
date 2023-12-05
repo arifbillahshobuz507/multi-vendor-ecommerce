@@ -45,7 +45,7 @@ Route::group(['prefix'=>'backend'], function()
 
         Route::get('/admin/edit/{id}', [AdminController::class, 'edit_profile'])->name('edit.admin');
         // Route::get('/admin/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
-        // Route::put('/update/admin/{id}', [AdminController::class, 'update'])->name('update.admin');
+        Route::put('/update/admin/{id}', [AdminController::class, 'update'])->name('update.admin');
 
 
         // customer Routes

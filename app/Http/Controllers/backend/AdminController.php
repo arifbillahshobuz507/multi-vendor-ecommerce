@@ -30,7 +30,7 @@ class AdminController extends Controller
   public function edit_profile($id)
   {
     $admins = Admin::find($id);
-    return view('backend.pages.admin.edit', compact('admins'));
+    return view('backend.pages.admin_profile.edit', compact('admins'));
   }
 
 

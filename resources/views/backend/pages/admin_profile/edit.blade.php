@@ -10,14 +10,14 @@
                 @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1">First Name</label>
-                    <input type="text" value="{{$admins->first_name}}" name="first_name" class="form-control is-valid" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your First Name" required>
+                    <input type="text" value="Null" name="first_name" class="form-control is-valid" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your First Name" required>
                 </div>
                 @error('first_name')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="form-group">
                     <label for="exampleInputEmail1">Last Name</label>
-                    <input type="text" value="{{$admins->last_name}}" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Last Name" required>
+                    <input type="text" value="Null" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Last Name" required>
                 </div>
                 @error('last_name')
                 <div class="alert alert-danger">{{ $message }}</div>
