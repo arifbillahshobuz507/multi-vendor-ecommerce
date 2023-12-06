@@ -710,10 +710,13 @@
 
 
 
-
+                                            @guest
                                             <a class="btn btn-success" href="#">Login</a>
                                             <a class="btn btn-success" href="#">Regestetion</a>
+                                            @endguest
+                                            @auth
                                             <a class="btn btn-success" href="#">Logout</a>
+                                            @endauth
 
 
 

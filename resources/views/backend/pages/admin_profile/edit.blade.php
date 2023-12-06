@@ -5,8 +5,8 @@
         <h1>
             Edit your Information!
         </h1>
-        <form action="{{route('update.admin',$admins->id)}}" method="post" class="was-validated" enctype="multipart/form-data">
-           
+        <form action="" method="post" class="was-validated" enctype="multipart/form-data">
+
             @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>
@@ -24,26 +24,19 @@
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="email" value="{{$admins->gmail}}" name="gmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
+                <input type="email" value="" name="gmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email" required>
             </div>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="form-group">
                 <label for="exampleInputEmail1">Phone</label>
-                <input type="number" value="{{$admins->phone}}" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Unique Phone Number" required>
+                <input type="number" value="" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Unique Phone Number" required>
             </div>
             @error('phone')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
 
-            <div class="form-group">
-                <label for="exampleInputEmail1">Role</label>
-                <select name="role" value="{{$admins->role}}" id="" class="form-control" required>
-                    <option value="admin">Admin</option>
-                    <option value="manage">manegar</option>
-                </select>
-            </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Date of Birth</label>
                 <input type="date" name="birth_day" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>

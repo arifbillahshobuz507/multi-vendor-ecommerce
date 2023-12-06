@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -18,14 +19,15 @@
     <meta property="og:title" content="Ella - Mutilpurpose Shopify Theme OS 2.0">
     <meta property="og:type" content="website">
     <meta property="og:description" content="ELLA is an All-in-one Shopify Template with multiple layouts and styles allows you to create different structures and satisfies any specific requirements for different kinds of business.">
-
+    
     <meta property="og:image" content="http://new-ella-demo.myshopify.com/cdn/shop/files/ella_multi_purpose_shopify_theme.jpg?v=1668066771">
     <meta property="og:image:secure_url" content="https://new-ella-demo.myshopify.com/cdn/shop/files/ella_multi_purpose_shopify_theme.jpg?v=1668066771">
     <meta property="og:image:width" content="590">
     <meta property="og:image:height" content="300"><meta name="twitter:site" content="@shopify"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ella - Mutilpurpose Shopify Theme OS 2.0">
     <meta name="twitter:description" content="ELLA is an All-in-one Shopify Template with multiple layouts and styles allows you to create different structures and satisfies any specific requirements for different kinds of business.">
-
+    @notifyCss
+    <style type="text/css"> .notify{ z-index: 1000000; margin-top: 4%; } </style>
     <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/8133050458/digital_wallets/dialog">
     <meta name="shopify-checkout-api-token" content="b39fdb51fc99e345463e50d63c93a45e">
     <link rel="alternate" hreflang="x-default" href="https://new-ella-demo.myshopify.com/">
@@ -922,6 +924,7 @@
       </script>                                    
       <main id=
         "MainContent" class="wrapper-body content-for-layout focus-none" role="main" tabindex="-1">
+        
         <!-- BEGIN sections: content_1group -->
                 @yield('content_1')        
         <!-- END sections: content_1group -->
@@ -1029,11 +1032,12 @@
       </div>      
       <!-- END sections: footer-group -->
 
-
+      
                      
       <!-- BEGIN sections: mobail-app-mantetance-group -->
       @include("forntend.includes.mobaile")
       <!-- END sections: mobail-app-mantetance-group -->
-
+      
+      @notifyJs
       </body>
 </html>

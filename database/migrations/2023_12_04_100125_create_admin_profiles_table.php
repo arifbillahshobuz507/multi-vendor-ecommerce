@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('age', 10);
             $table->string('city');
             $table->string('address', 300);
-            $table->enum('gender', ['male', 'female']);
+            $table->string('gender');
             $table->longText('description');
             //Relation admin
             $table->foreignId('admin_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
