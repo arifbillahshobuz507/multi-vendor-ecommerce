@@ -1,12 +1,13 @@
-@extends("backend.master")
-@section('content')
+@notifyCss
+@include("backend.includes.style")
+
 <main class="fluid ">
     <div class="container col-6">
         <h3 class="mt-3">
-            Input Admin Information!
+            Input Customer Information!
         </h3>
         <div class="col container mt-4 pt-4 pb-4 rounded border border-warning">
-        <form action="{{route('sotre.admin')}}" method="post" class="was-validated" enctype="multipart/form-data">
+        <form action="{{route('sotre.customer')}}" method="post" class="was-validated">
             @csrf   
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
@@ -14,7 +15,7 @@
             </div>            
             <div class="form-group">
                 <label for="exampleInputEmail1">Phone</label>
-                <input type="number" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Unique Phone Number" required>
+                <input type="number" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Phone Number" required>
             </div>            
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
@@ -27,4 +28,7 @@
     </div>
     
 </main>
-@endsection
+<x-notify::notify />
+@notifyJs
+
+

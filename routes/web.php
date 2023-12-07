@@ -36,26 +36,30 @@ Route::group(['prefix'=>'backend'], function()
         Route::get('/dashbord', [AdminController::class, 'backendHomePage'])->name('backend.home');
 
         // admin Routes
-        Route::get('/admin', [AdminController::class, 'list'])->name('admin');
-        Route::get('/admin/add', [AdminController::class, 'add_admin'])->name('admin.add');
-        Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
-        Route::post('/admin/store', [AdminController::class, 'store'])->name('sotre.admin');
-
-
+        Route::group(['prefix' => 'admin'], function(){
+            Route::get('/', [AdminController::class, 'list'])->name('admin');
+            Route::get('/add', [AdminController::class, 'add_admin'])->name('admin.add');
+            Route::post('/store', [AdminController::class, 'store'])->name('sotre.admin');
+            Route::get('/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
+            Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');
+            Route::post('/update/{id}', [AdminController::class, 'update'])->name('update.admin');        
+            Route::get('/view/{id}', [AdminController::class, 'view'])->name('view.admin');  
+        });              
         
-        Route::get('/admin/edit', [AdminController::class, 'edit_profile'])->name('edit.admin');
-        // Route::post('/update/admin/{id}', [AdminController::class, 'update'])->name('update.admin');
-
-
-        Route::get('/add/admin', [AdminController::class, 'form'])->name('add.admin');
-
-        // Route::get('/admin/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
-
+        // admin Profile Routes
+        Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
 
         // customer Routes
         Route::get('/customer/list', [CustomerController::class, 'list'])->name('customer.list');
         Route::get('/customer/from', [CustomerController::class, 'from'])->name('add.customer');
         Route::post('/customer/store', [CustomerController::class, 'store'])->name('sotre.customer');
+        Route::get('/customer/delete/{id}', [CustomerController::class, 'delete'])->name('delete.customer');
+        Route::get('/customer/edit/{id}', [CustomerController::class, 'edit'])->name('edit.customer');
+        Route::post('/customer/update/{id}', [CustomerController::class, 'update'])->name('update.customer');
+        Route::get('/customer/view/{id}', [CustomerController::class, 'view'])->name('view.customer');        
+
+
+
 
         // category Routes
         Route::get('/categori/list', [CategoriesController::class, 'category_list'])->name('category.list');
@@ -103,55 +107,4 @@ Route::group(['prefix'=>'backend'], function()
         Route::get('/logout',[UserController::class , 'logout'])->name('admin.logout');
     
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Route::get('/backend/review', [RivewController::class, 'list'])->name('wishlist.list');
-
-// Route::get('/backend/report', [RivewController::class, 'list'])->name('report.lish');
-
-// Route::get('/backend/review', [RivewController::class, 'list'])->name('rivewRating.list');
-// Route::get('/backend/see/review', [RivewController::class, 'rivewList'])->name('see.rivews');
-// Route::get('/backend/see/review', [RivewController::class, 'seerivewList'])->name('see.rivews');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 require __DIR__ . '/auth.php';

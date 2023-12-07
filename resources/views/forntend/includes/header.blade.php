@@ -1,3 +1,5 @@
+<!-- @include("backend.includes.style") -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <div id="shopify-section-sections--14861833830490__announcement-bar" class="shopify-section shopify-section-group-header-group">
     <style type="text/css">
         @keyframes SlideLeft {
@@ -131,259 +133,8 @@
             }
         }
     </style>
-
-    <script>
-        nouncementBar extends HTMLElement {
-            () is.closeAnnouncementBu r('[data-close-announcement]');
-            this.announcementBarSlider = thi nnouncement - bar]
-        ');
-        this.announcementHasSlides = this.announ lectorAll('.announcement-bar__message').length > 1;
-
-        if (AnnouncementBar.getCookie('announcement') == this.remove();
-        }
-        else {
-            1;
-            bility = ;
-
-            this.
-            this.closeAnnounce ener uncementBar.bind(this));
-        nnouncementBar(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        rem AnnouncementBar.setCook ed ', 1);
-        uncementBarSlider() {
-                .announcementHa ementBarSlider.classList.contains('slick-initialized')) l this.announceme ws == 'true' || this.announcementBarSlider.dataset.arrows == true ? showArrows = true : showArrows = fals s.announcementBa infinite: true,
-            vertical: false,
-            adaptiveHeight: true,
-            slidesT slidesToScroll: 1,
-            autop autoplaySpeed: 3000 row: '<button typ                        ia-label="Next"><sv                        class="icon i                        ron-right"><g><g><po                        32.035 313.804,2                        8.448 377.954,239.232                        g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></button>',
-            prevArrow: '<button type="button" class="slick-prev" aria-label="Previous"><svg viewBox="0 0 370.814 370.814" class="icon icon-chevron-left" id="icon-chevron-left"><g><g><polygon points="292.92,24.848 268.781,0 77.895,185.401 268.781,370.814 292.92,345.961 127.638,185.401"></poly                        ><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></button>',
-        });
-        }
-        }
-
-        static setCookie(cname, cvalue, exdays) {
-            const d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            const expires = 'expires=' + d.toUTCString();
-            document.coo ';'
-            name) {
-            const name = cname
-            const ca = document.co
-            for (var i = 0; i < ca.length; i++) {
-                ;
-                while (c.charAt(0) === '                      c = c.substring(1);
-                } ===
-                return c.substri);
-        }
-
-        }
-
-
-
-        #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar {
-                padding - top: 7 px;
-                padding - bottom: 5 px;
-                background: linear - gradient(90 deg, rgba(153, 41, 234, 1), rgba(88, 8, 251, 1) 100 % )
-            }
-
-            .announcement - bar.layout--scroll {
-                max - width: 100 % ;
-                padding - left: 0;
-                padding - right: 0;
-                overflow: hidden;
-                text - align: right;
-            }
-
-            .header - full - width #shopify - section - announcement - bar.announcement - bar.layout--scroll {
-                padding - left: 0;
-                padding - right: 0
-            }
-
-            .announcement - bar.layout--scroll.row {
-                display: inline - block;
-                text - align: left;
-                white - space: nowrap
-            }
-
-            .announcement - bar__item - scroll {
-                display: inline - block;
-                animation: SlideLeft 5 s infinite linear
-            }
-
-            .announcement - bar.layout--scroll: hover.announcement - bar__item - scroll,
-            .announcement - bar.layout--scroll: focus.announcement - bar__item - scroll {
-                animation - play - state: paused
-            }
-
-            .announcement - bar.layout--scroll.announcement - bar__message {
-                width: auto;
-                vertical - align: middle
-            }
-
-            .announcement - bar.layout--scroll.announcement - bar__message.message,
-            .announcement - bar.layout--scroll.announcement - bar__message p {
-                padding: 5 px 12.5 px
-            }
-
-            .announcement - bar.announcement - bar__message svg {
-                display: inline - block;
-                vertical - align: middle;
-                width: 16 px;
-                height: 16 px
-            }
-
-            .announcement - bar.layout--scroll.announcement - bar__message.underline {
-                text - decoration: underline;
-                text - decoration - thickness: 1 px;
-                text - underline - offset: 4 px
-            }
-
-        #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar__message,
-            #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar__message.message,
-            #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar__message a,
-            #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar__message p,
-            #shopify - section - sections--14861833830490__ announcement - bar.top - mesage - countdown {
-                color: #ffffff;
-                font - size: 12 px;
-                font - style: normal;
-                font - weight: 700;
-                letter - spacing: 0
-            }
-
-            .announcement - bar.announcement - close.hasCountDown {
-                width: 21 px;
-                height: 21 px
-            }
-
-        #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar.announcement - close svg {
-            fill: #ffffff
-        }
-
-        #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar.announcement - countdown.clock - item {
-            color: var (--countdown - text - color);
-            border: 1 px solid
-            var (--countdown - text - border);
-            background - color: var (--countdown - text - background)
-        }
-
-        #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar.announcement - countdown.clock - item: before {
-                color: #ffffff
-            }
-
-            .announcement - bar.layout--slider.announcement - bar__message {
-                display: none
-            }
-
-            .announcement - bar.layout--slider.announcement - bar__message: first - child {
-                display: inline - block
-            }
-
-            .announcement - bar.slick - slider.announcement - bar__message {
-                display: inline - block
-            }
-
-        @media(max - width: 1400 px) {}
-
-        @media(max - width: 1199 px) {}
-
-        @media(max - width: 1024 px) {
-            .announcement - bar.announcement - countdown + .announcement - close {
-                top: 20 %
-            }
-
-            #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar__message.message.font - size - mb {
-                font - size: calc(12 px - 2 px)
-            }
-        }
-
-        @media(max - width: 551 px) {
-                #shopify - section - sections--14861833830490__ announcement - bar.announcement - bar__message.message.font - size - mb {
-                    font - size: calc(12 px - 4 px)
-                }
-            } <
-            /style>
-
-            <
-            script >
-            class AnnouncementBar extends HTMLElement {
-                constructor() {
-                    super();
-                }
-
-                connectedCallback() {
-                    this.closeAnnouncementButton = this.querySelector('[data-close-announcement]');
-                    this.announcementBarSlider = this.querySelector('[data-announcement-bar]');
-                    this.announcementHasSlides = this.announcementBarSlider?.querySelectorAll('.announcement-bar__message').length > 1;
-
-                    if (AnnouncementBar.getCookie('announcement') == 'closed') {
-                        this.remove();
-                    } else {
-                        this.style.opacity = 1;
-                        this.style.visibility = 'visible';
-                    };
-
-                    this.initAnnouncementBarSlider();
-                    this.closeAnnouncementButton?.addEventListener('click', this.closeAnnouncementBar.bind(this));
-                }
-
-                closeAnnouncementBar(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    this.remove();
-                    AnnouncementBar.setCookie('announcement', 'closed', 1);
-                }
-
-                initAnnouncementBarSlider() {
-                    if (this.announcementHasSlides && !this.announcementBarSlider.classList.contains('slick-initialized')) {
-                        let showArrows;
-                        this.announcementBarSlider.dataset.arrows == 'true' || this.announcementBarSlider.dataset.arrows == true ? showArrows = true : showArrows = false;
-                        $(this.announcementBarSlider).slick({
-                            infinite: true,
-                            vertical: false,
-                            adaptiveHeight: true,
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            dots: false,
-                            arrows: showArrows,
-                            autoplay: true,
-                            autoplaySpeed: 3000,
-                            nextArrow: '<button type="button" class="slick-next" aria-label="Next"><svg viewBox="0 0 478.448 478.448" class="icon icon-chevron-right" id="icon-chevron-right"><g><g><polygon points="131.659,0 100.494,32.035 313.804,239.232 100.494,446.373 131.65,478.448 377.954,239.232"></polygon></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></button>',
-                            prevArrow: '<button type="button" class="slick-prev" aria-label="Previous"><svg viewBox="0 0 370.814 370.814" class="icon icon-chevron-left" id="icon-chevron-left"><g><g><polygon points="292.92,24.848 268.781,0 77.895,185.401 268.781,370.814 292.92,345.961 127.638,185.401"></polygon></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></button>',
-                        });
-                    }
-                }
-
-                static setCookie(cname, cvalue, exdays) {
-                    const d = new Date();
-                    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                    const expires = 'expires=' + d.toUTCString();
-                    document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
-                }
-
-                static getCookie(cname) {
-                    const name = cname + '=';
-                    const ca = document.cookie.split(';');
-
-                    for (var i = 0; i < ca.length; i++) {
-                        var c = ca[i];
-                        while (c.charAt(0) === ' ') {
-                            c = c.substring(1);
-                        }
-                        if (c.indexOf(name) === 0) {
-                            return c.substring(name.length, c.length);
-                        }
-                    }
-
-                    return '';
-                }
-            }
-
-        customElements.define('announcement-bar-component', AnnouncementBar);
-    </script>
 </div>
+
 <div id="shopify-section-sections--14861833830490__e0f216a9-88dd-49b5-a95a-7142db3f671f" class="shopify-section shopify-section-group-header-group section-header-navigation section-header-nav-multi-site">
     <link rel="stylesheet" href="//new-ella-demo.myshopify.com/cdn/shop/t/179/assets/component-megamenu.css?v=4628486933129786311695632211" media="all" onload="this.media='all'">
     <link rel="stylesheet" href="//new-ella-demo.myshopify.com/cdn/shop/t/179/assets/component-header-nav-multi-site.css?v=162184358767552715401695884333" media="all" onload="this.media='all'">
@@ -493,9 +244,9 @@
 
         .header-nav-multi-site .menu-drawer__close-button {
             font-size: px;
-            font-weight: ;
+            font-weight: 10px;
             color: #000000;
-            text-transform:
+            text-transform: .0;
         }
 
         /* Settings Header Tab */
@@ -587,7 +338,7 @@
                 display: block
             }
         }
-    </style>
+    </style>    
     <script src="//new-ella-demo.myshopify.com/cdn/shop/t/179/assets/details-disclosure.js?v=93212506302784624691658314593" defer="defer"></script><sticky-header data-sticky-type="on_scroll" class="header-navigation-wrapper header-wrapper">
         <header class="header header-06 header-nav-multi-site header--has-menu" data-id="shopify-section-sections--14861833830490__e0f216a9-88dd-49b5-a95a-7142db3f671f" style="--spacing-l-r: 30px; --icon-mobile-spacing: px">
 
@@ -605,83 +356,76 @@
                                     <ul class="list-menu list-menu--inline text-left" role="list">
                                         <li class="menu-lv-item menu-lv-1 has-megamenu dropdown block_layout--custom_width">
                                             <a class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="/">
-                                                <span class="text header__active-menu-item p-relative">Theme
-                                                    Demo</span>
-                                                <span class="icon-dropdown" data-toggle-menu-mb=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
-                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z">
-                                                        </path>
-                                                    </svg></span></a>
+                                                <span class="text header__active-menu-item p-relative">Theme Demo</span>
+                                                <span class="icon-dropdown" data-toggle-menu-mb="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
+                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
 
-
+                                            <!--  Hover code Theme Demo -->
                                             @include("forntend.headers menu.theme_demo")
-
-
-
-
-
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 has-megamenu dropdown block_layout--custom_width">
                                             <a class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="/collections">
                                                 <span class="text header__active-menu-item p-relative">Shop</span>
-                                                <span class="icon-dropdown" data-toggle-menu-mb=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
-                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z">
-                                                        </path>
-                                                    </svg></span></a>
+                                                <span class="icon-dropdown" data-toggle-menu-mb="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
+                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+
+                                            <!--  Hover code Shop -->
                                             @include("forntend.headers menu.shop")
-
-
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 has-megamenu dropdown block_layout--custom_width">
                                             <a class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="https://new-ella-demo.myshopify.com/?preview_theme_id=">
                                                 <span class="text p-relative">Product</span>
-                                                <span class="icon-dropdown" data-toggle-menu-mb=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
-                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z">
-                                                        </path>
-                                                        @include("forntend.headers menu.product")
-                                                    </svg></span></a>
+                                                <span class="icon-dropdown" data-toggle-menu-mb="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
+                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
 
-
-
-
-
+                                            <!--  Hover code Product -->
+                                            @include("forntend.headers menu.product")
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown"><a class="menu-lv-1__action  header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="#"><span class="text p-relative">Blog</span>
-                                                <span class="icon-dropdown" data-toggle-menu-mb=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
-                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z">
-                                                        </path>
-                                                    </svg></span></a>
+                                                <span class="icon-dropdown" data-toggle-menu-mb="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
+                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+
+                                            <!--  Hover code Blog -->
                                             @include("forntend.headers menu.bolg")
-
-
-
-
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown"><a class="menu-lv-1__action  header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="https://new-ella-demo.myshopify.com/?preview_theme_id="><span class="text p-relative">Pages</span>
-                                                <span class="icon-dropdown" data-toggle-menu-mb=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
-                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z">
-                                                        </path>
-                                                    </svg></span></a>
+                                                <span class="icon-dropdown" data-toggle-menu-mb="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
+                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+
+                                            <!--  Hover code Blog -->
                                             @include("forntend.headers menu.pages")
-
-
-
-
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 has-megamenu dropdown block_layout--custom_width">
                                             <a class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="/">
                                                 <span class="text header__active-menu-item p-relative">Trend</span>
-                                                <span class="icon-dropdown" data-toggle-menu-mb=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
-                                                        <path .;''''''''''''' d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z">
-                                                        </path>
-                                                    </svg></span></a>
-
+                                                <span class="icon-dropdown" data-toggle-menu-mb="">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
+                                                        <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <!--  Hover code Trend -->
                                             @include("forntend.headers menu.trend")
-
-
-
-
-
-
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 has-megamenu dropdown block_layout--full">
                                             <a class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="/collections">
@@ -691,12 +435,9 @@
                                                         </path>
                                                     </svg></span></a>
 
+                                            <!--  Hover code Collections -->
                                             @include("forntend.headers menu.collections")
-
-
-
-
-                                        </li>,./
+                                        </li>
                                     </ul>
                                 </nav>
 
@@ -707,19 +448,13 @@
                                 <predictive-search class="search-modal__form" data-loading-text="Loading..." data-product-to-show="5">
                                     <details class="search_details">
                                         <summary class="header__search-full" aria-haspopup="dialog" aria-label="Search">
-
-
-
                                             @guest
-                                            <a class="btn btn-success" href="#">Login</a>
-                                            <a class="btn btn-success" href="#">Regestetion</a>
+                                            <a class="btn btn-success p-3  " href="">Login</a>
+                                            <a class="btn btn-success  p-3 " href="{{route('add.customer')}}">Regestetion</a>
                                             @endguest
                                             @auth
                                             <a class="btn btn-success" href="#">Logout</a>
                                             @endauth
-
-
-
                                         </summary>
                                     </details>
                                 </predictive-search>
@@ -760,24 +495,5 @@
         $(window).on('resize', function() {
             appendPrependMenuMobile();
         })
-    </script>
-    <script type="application/ld+json">
-        >>> >>> > ff7a7f2c56efb5fd2665fd9dcf33642812ca4bc5 {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "new-ella-demo",
-
-            "sameAs": [
-                "https:\/\/twitter.com\/shopify",
-                "https:\/\/www.facebook.com\/shopify",
-                "https:\/\/www.pinterest.com\/shopify\/",
-                "https:\/\/www.instagram.com\/shopify\/",
-                "",
-                "",
-                "",
-                ""
-            ],
-            "url": "https:\/\/new-ella-demo.myshopify.com"
-        }
-    </script>
+    </script>    
 </div>

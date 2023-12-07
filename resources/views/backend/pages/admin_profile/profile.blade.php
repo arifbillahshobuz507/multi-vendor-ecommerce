@@ -157,7 +157,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " href="{{route('edit.admin')}}">Edit</a>
+                      <a class="btn btn-info " href="">Edit</a>
                     </div>
                   </div>
                 </div>

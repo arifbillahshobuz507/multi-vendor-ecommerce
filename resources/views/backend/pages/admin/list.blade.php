@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Admin</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
           <tr>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
-            <th scope="col">Action</th>
+            <th scope="col container">Action</th>
 
           </tr>
         </thead>
@@ -36,10 +36,10 @@
           <tr>
             <td>{{$admin->gmail}}</td>
             <td>{{$admin->phone}}</td>
-            <td>
-              <a class="btn" href="#"><i class="fa-solid fa-eye" style="color: #1827fb;"></i></a>
-              <a class="btn" href="#"><i class="fa-solid fa-pen-to-square" style="color: #11e85d;"></i></a>
-              <a class="btn" href="#"><i class="fa-solid fa-trash" style="color: #eb0a0a;"></i></a>
+            <td >
+              <a class="btn" href="{{route('view.admin', $admin->id)}}"><i class="fa-solid fa-eye" style="color: #1827fb;"></i></a>
+              <a class="btn" href="{{route('edit.admin', $admin->id)}}"><i class="fa-solid fa-pen-to-square" style="color: #11e85d;"></i></a>
+              <a class="btn" href="{{route('delete.admin', $admin->id)}}"><i class="fa-solid fa-trash" style="color: #eb0a0a;"></i></a>
             </td>
           </tr>
           @endforeach
