@@ -39,10 +39,10 @@
               </td>
               <td>{{$category->name}}</td>
               <td>
-                <a class="btn" href=""><i class="fa-solid fa-eye" style="color: #1827fb;"></i></a>
-                <a class="btn" href=""><i class="fa-solid fa-pen-to-square" style="color: #11e85d;"></i></a>
-                <a class="btn" href=""><i class="fa-solid fa-trash" style="color: #eb0a0a;"></i></a>
-              </td>
+              <a class="btn" href="{{route('view.categori', $category->id)}}"><i class="fa-solid fa-eye" style="color: #1827fb;"></i></a>
+              <a class="btn" href="{{route('edit.categori', $category->id)}}"><i class="fa-solid fa-pen-to-square" style="color: #11e85d;"></i></a>
+              <a class="btn" href="{{route('delete.categori', $category->id)}}"><i class="fa-solid fa-trash" style="color: #eb0a0a;"></i></a>
+            </td>
             </tr>
             @endforeach
           </tbody>
