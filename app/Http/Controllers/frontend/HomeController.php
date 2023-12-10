@@ -10,8 +10,8 @@ class HomeController extends Controller
 {
     public function forntendHomePage()
     {
-        $category = Category::all();
-//        dd($category);
-        echo view("forntend.home.index", compact('category'));
+        $categories = Category::all();
+    //    dd($categories);
+        echo view("forntend.home.index", compact('categories'));
     }
 }

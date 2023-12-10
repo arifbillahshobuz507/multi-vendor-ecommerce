@@ -25,9 +25,9 @@
     </script>
     <main id="MainContent" class="wrapper-body content-for-layout focus-none" role="main" tabindex="-1">
 
-      <!-- BEGIN sections: content_1group -->
-      @yield('content_1')
-      <!-- END sections: content_1group -->
+      <!-- BEGIN sections: banner -->
+      @yield('banner')
+      <!-- END sections: banner -->
 
 
 
@@ -37,46 +37,21 @@
 
 
 
-      <!-- BEGIN sections: containt_2-group -->
-      @yield('content_2')
+      <!-- BEGIN sections: bye_one_get_one-group -->
+      @yield('bye_one_get_one')
 
-      <!-- END sections: content_2-group -->
+      <!-- END sections: bye_one_get_one-group -->
+    
 
+      <!-- BEGIN sections: memberships-group -->
+      @yield('memberships')
 
+      <!-- END sections: memberships-group -->
+      
 
-      <!-- BEGIN sections: containt_3-group -->
-      @yield('content_3')
-      <!-- END sections: content_3-group -->
-
-
-
-
-      <!-- BEGIN sections: containt_4-group -->
-      @yield('content_4')
-      <!-- END sections: containt_4-group -->
-
-
-
-
-      <!-- BEGIN sections: containt_5-group -->
-      @yield('content_5')
-
-      <!-- END sections: containt_5-group -->
-
-
-
-
-      <!-- BEGIN sections: containt_6-group -->
-      @yield('content_6')
-
-      <!-- END sections: containt_6-group -->
-
-
-
-
-      <!-- BEGIN sections: containt_7-group -->
-      @yield('content_7')
-      <!-- END sections: containt_7-group -->
+      <!-- BEGIN sections: best_selling-group -->
+      @yield('best_selling')
+      <!-- END sections: best_selling-group -->
 
 
 
@@ -121,7 +96,7 @@
 
       <!-- BEGIN sections: about-group -->
       @yield('about')
-      <!-- END sections: about-group -->
+      END sections: about-group
 
 
     </main>

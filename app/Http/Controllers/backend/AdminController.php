@@ -28,7 +28,7 @@ class AdminController extends Controller
 
 
   //Add admin code 
-  public function add_admin(Request $request)
+  public function from(Request $request)
   {       
     return view("backend.pages.admin.form");
   }
@@ -45,8 +45,7 @@ class AdminController extends Controller
       ]);
 
       if($validate->fails()) {
-        notify()->error('Somthing is wrong');
-        return redirect()->back()->withErrors($validate, "this is requred");
+        return redirect()->back()->withErrors($validate);;
       } 
         
       // Hash the password beroe storing
@@ -113,8 +112,6 @@ class AdminController extends Controller
 
     //Check validate
     if ($validate->fails()) {      
-      notify()->error('Somthing is wrong');
-
       return redirect()->back()->withErrors($validate);
     }else{
       $admins->update([

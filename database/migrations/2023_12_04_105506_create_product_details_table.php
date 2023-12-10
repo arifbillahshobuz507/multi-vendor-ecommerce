@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image1',300);
             $table->string('image2',300);
-            $table->string('image3',300);
+            $table->string('image3',300)->nullable();
             $table->string('color');
             $table->string('size');
             $table->longText('description');            

@@ -37,7 +37,7 @@ Route::group(['prefix' => 'backend'], function () {
     // admin Routes
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/', [AdminController::class, 'list'])->name('admin');
-        Route::get('/add', [AdminController::class, 'add_admin'])->name('admin.add');
+        Route::get('/add', [AdminController::class, 'from'])->name('admin.add');
         Route::post('/store', [AdminController::class, 'store'])->name('sotre.admin');
         Route::get('/delete/{id}', [AdminController::class, 'delete'])->name('delete.admin');
         Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit.admin');

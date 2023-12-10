@@ -32,8 +32,7 @@ class CustomerController extends Controller
         ]);
 
         if ($validate->fails()) {
-            notify()->error('Somthing is wrong');
-            return redirect()->back()->withErrors('invalid user email or password');
+            return redirect()->back()->withErrors($validate);
         }
 
         // Hash the password beroe storing
@@ -99,9 +98,7 @@ class CustomerController extends Controller
 
         //Check validate
         if ($validate->fails()) {
-            notify()->error('Somthing is wrong');
-
-            return redirect()->back();
+            return redirect()->back()->withErrors($validate);
         } else {
             $customer->update([
                 'gmail' => $request->gmail,

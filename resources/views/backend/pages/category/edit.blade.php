@@ -14,6 +14,9 @@
                     <input value="{{$categories->name}}" type="text" name="category_name" class="form-control" id="category_name"
                         aria-describedby="emailHelp" placeholder="Enter Your Category Name">
                 </div>
+                @error('category_name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
                 <div class="form-group">
                     <label class="mt-2" for="exampleInputEmail1">Image</label>
                     <input type="file" name="image" class="form-control" id="exampleInputEmail1"
@@ -22,7 +25,10 @@
                 <div class="form-group">
                     <label class="mt-2" for="exampleInputEmail1">Dresscription</label>
                     <textarea name="descripton" class="form-control" id="" cols="30" rows="10">{{$categories->descripton}}</textarea>
-                </div>                
+                </div>
+                @error('descripton')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror                
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>
             </form>
             </div>            

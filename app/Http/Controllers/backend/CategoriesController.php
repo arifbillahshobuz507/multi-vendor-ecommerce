@@ -63,7 +63,6 @@ class CategoriesController extends Controller
             return redirect()->route('category.list');
         } else {
             notify()->error('Category not found');
-
             return redirect()->route('category.list');
         }
     }
@@ -90,10 +89,8 @@ class CategoriesController extends Controller
         ]);
 
         //Check validate
-        if ($validate->fails()) {
-            notify()->error('Somthing is wrong');
-
-            return redirect()->back();            
+        if ($validate->fails()) {  
+            return redirect()->back()->withErrors($validate);           
         }else{
 
             //dd($request->all());

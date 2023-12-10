@@ -1,5 +1,4 @@
 <!-- @include("backend.includes.style") -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <div id="shopify-section-sections--14861833830490__announcement-bar" class="shopify-section shopify-section-group-header-group">
     <style type="text/css">
         @keyframes SlideLeft {
@@ -369,7 +368,7 @@
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 has-megamenu dropdown block_layout--custom_width">
                                             <a class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="/collections">
-                                                <span class="text header__active-menu-item p-relative">Shop</span>
+                                                <span class="text header__active-menu-item p-relative">Category</span>
                                                 <span class="icon-dropdown" data-toggle-menu-mb="">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret">
                                                         <path d="M 7.75 1.34375 L 6.25 2.65625 L 14.65625 12 L 6.25 21.34375 L 7.75 22.65625 L 16.75 12.65625 L 17.34375 12 L 16.75 11.34375 Z"></path>
@@ -378,7 +377,7 @@
                                             </a>
 
                                             <!--  Hover code Shop -->
-                                            @include("forntend.headers menu.shop")
+                                            @include("forntend.headers menu.category")
                                         </li>
                                         <li class="menu-lv-item menu-lv-1 has-megamenu dropdown block_layout--custom_width">
                                             <a class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link link-effect" href="https://new-ella-demo.myshopify.com/?preview_theme_id=">
