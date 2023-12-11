@@ -21,8 +21,8 @@
             </div>
             <div class="form-group">
                 <label class="mt-2">Sub Category Name</label>
-                <select class="form-control" name="subcategory_id" required>
-                    @foreach($subcategories as $subcategory)
+                <select class="form-control" name="sub_category_id" required>
+                    @foreach($sub_categories as $subcategory)
                         <option value="{{$subcategory->id}}">{{$subcategory->name}}</option>
                     @endforeach
                 </select>

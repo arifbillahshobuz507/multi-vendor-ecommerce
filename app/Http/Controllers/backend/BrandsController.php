@@ -38,7 +38,7 @@ class BrandsController extends Controller
       Brand::create([
         'name' => $request->brand_name,
         'image' => $fileName,  
-        'description'=>$request->description
+        'descripton'=>$request->description
       ]);
       return redirect()->route('brand.list')->with('success','Brand Created Successfully');
     }

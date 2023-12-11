@@ -2,16 +2,16 @@
 @section('content')
     <main class="fluid ">
         <div class="container col-8">
-            <h1>
-                Input your Category Information!
-            </h1>
+            <h4>
+                update your Sub Category Information!
+            </h4>
             <hr>
             <div class=" container pb-5 rounded border border-warning">
-            <form action="{{ route('category.update', $categories->id) }}" method="post" class="mt-5" enctype="multipart/form-data">
+            <form action="{{ route('subcategory.update', $sub_categories->id) }}" method="post" class="mt-5" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1">Category Name</label>
-                    <input value="{{$categories->name}}" type="text" name="category_name" class="form-control" id="category_name"
+                    <input value="{{$sub_categories->name}}" type="text" name="name" class="form-control" id="category_name"
                         aria-describedby="emailHelp" placeholder="Enter Your Category Name">
                 </div>
                 @error('category_name')
@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-group">
                     <label class="mt-2" for="exampleInputEmail1">Dresscription</label>
-                    <textarea name="descripton" class="form-control" id="" cols="30" rows="10">{{$categories->descripton}}</textarea>
+                    <textarea name="descripton" class="form-control" id="" cols="30" rows="10">{{$sub_categories->descripton}}</textarea>
                 </div>
                 @error('descripton')
                     <div class="alert alert-danger">{{ $message }}</div>

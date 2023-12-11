@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Sub_category;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -21,10 +22,10 @@ class ProdutController extends Controller
     public function form()
     {
         $categories = Category::all();
-        $subcategories = SubCategory::all();
+        $sub_categories = Sub_category::all();
         $brands = Brand::all();
         //        dd($categories);
-        return view("backend.pages.products.form", compact(['categories', 'subcategories', 'brands']));
+        return view("backend.pages.products.form", compact(['categories', 'sub_categories', 'brands']));
     }
     public function store(Request $request)
     {
@@ -50,14 +51,14 @@ class ProdutController extends Controller
         }
         Product::create([
             'name' => $request->product_name,
+            'image' => $fileName,
+            'price' => $request->price,
             'category_id' => $request->category_id,
-            'subcategory_id' => $request->subcategory_id,
+            'sub_category_id' => $request->sub_category_id,
             'brand_id' => $request->brand_id,
             'release_data' => $request->release_data,
             'quantity' => $request->quantity,
-            'price' => $request->price,
-            'image' => $fileName,
-            'descripton' => $request->descripton
+            'short_descripton' => $request->descripton
         ]);
         return redirect()->route('product.list');
     }
@@ -74,7 +75,8 @@ class ProdutController extends Controller
     {
         // dd('welcome edite file');
         $categories = Category::all();
-        $subcategories = SubCategory::all();
+        $sub_categories = Sub_category::all();
+
         $brands = Brand::all();
         $product = Product::find($id);
         // dd([ $categories ,$subcategories,$brands,$products]);

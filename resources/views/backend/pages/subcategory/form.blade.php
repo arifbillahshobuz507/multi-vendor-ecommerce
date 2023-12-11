@@ -1,24 +1,24 @@
 @extends('backend.master')
 @section('content')
-    <main class="fluid ">
-        <div class="container col-6">
-            <h2>
-                Input your Sub Category Information!
-            </h2>
-            <hr>
+<main class="fluid ">
+    <div class="container col-6">
+        <h4>
+            Input your Sub Category Information!
+        </h4>
+        <hr>
+        <div class="container rounded border border-warning">
             <form action="{{ route('store.subcategory') }}" method="post" class="mt-5" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label class="mt-2">Sub Category Name</label>
-                    <input type="text" name="sub_category_name" class="form-control"
-                       placeholder="Enter Your Sub Category Name" required>
+                    <input type="text" name="sub_category_name" class="form-control" placeholder="Enter Your Sub Category Name" required>
                 </div>
                 @error('sub_category_name')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="form-group">
                     <label class="mt-2">Image</label>
-                    <input type="file" name="image" class="form-control" >
+                    <input type="file" name="image" class="form-control">
                 </div>
                 <div class="form-group">
                     <label class="mt-2">Category Name</label>
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 @error('category_id')
-                    <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                 <div class="form-group">
                     <label class="mt-2">Dresscription</label>
@@ -38,5 +38,7 @@
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>
             </form>
         </div>
-    </main>
+
+    </div>
+</main>
 @endsection

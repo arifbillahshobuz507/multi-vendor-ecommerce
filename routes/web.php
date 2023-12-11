@@ -49,35 +49,39 @@ Route::group(['prefix' => 'backend'], function () {
     Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
 
     // customer Routes
-    Route::get('/customer/list', [CustomerController::class, 'list'])->name('customer.list');
-    Route::get('/customer/from', [CustomerController::class, 'from'])->name('add.customer');
-    Route::post('/customer/store', [CustomerController::class, 'store'])->name('sotre.customer');
-    Route::get('/customer/delete/{id}', [CustomerController::class, 'delete'])->name('delete.customer');
-    Route::get('/customer/edit/{id}', [CustomerController::class, 'edit'])->name('edit.customer');
-    Route::post('/customer/update/{id}', [CustomerController::class, 'update'])->name('update.customer');
-    Route::get('/customer/view/{id}', [CustomerController::class, 'view'])->name('view.customer');
-
-
-
+    Route::group(['prefix'=>'customer'], function(){
+        Route::get('/list', [CustomerController::class, 'list'])->name('customer.list');
+        Route::get('/from', [CustomerController::class, 'from'])->name('add.customer');
+        Route::post('/store', [CustomerController::class, 'store'])->name('sotre.customer');
+        Route::get('/delete/{id}', [CustomerController::class, 'delete'])->name('delete.customer');
+        Route::get('/edit/{id}', [CustomerController::class, 'edit'])->name('edit.customer');
+        Route::post('/update/{id}', [CustomerController::class, 'update'])->name('update.customer');
+        Route::get('/view/{id}', [CustomerController::class, 'view'])->name('view.customer');
+    });
+    
 
     // category Routes
-    Route::get('/categori/list', [CategoriesController::class, 'category_list'])->name('category.list');
-    Route::get('/categori/add', [CategoriesController::class, 'form'])->name('add.categories');
-    Route::post('/categori/stor', [CategoriesController::class, 'store'])->name('stor.categories');
-    Route::get('/categori/delete/{id}', [CategoriesController::class, 'delete'])->name('delete.categori');
-    Route::get('/categori/edit/{id}', [CategoriesController::class, 'edit'])->name('edit.categori');
-    Route::post('/categori/update/{id}', [CategoriesController::class, 'update'])->name('update.categori');
-    Route::get('/categori/view/{id}', [CategoriesController::class, 'view'])->name('view.categori');
+    Route::group(['prefix' => 'category'], function () {        
+        Route::get('/list', [CategoriesController::class, 'list'])->name('category.list');
+        Route::get('/add', [CategoriesController::class, 'form'])->name('category.add');
+        Route::post('/stor', [CategoriesController::class, 'store'])->name('category.store');
+        Route::get('/delete/{id}', [CategoriesController::class, 'delete'])->name('category.delete');
+        Route::get('/edit/{id}', [CategoriesController::class, 'edit'])->name('category.edit');
+        Route::post('/update/{id}', [CategoriesController::class, 'update'])->name('category.update');
+        Route::get('/view/{id}', [CategoriesController::class, 'view'])->name('category.view');
+    });
 
     // SubCategory
-    Route::get('/subCategori/list', [SubcategoryController::class, 'subcategory_list'])->name('subcategory.list');
-    Route::get('/subCategori/from', [SubcategoryController::class, 'subcategory_from'])->name('add.subcategory');
-    Route::post('/subCategori/store', [SubcategoryController::class, 'subcategory_store'])->name('store.subcategory');
-
-    // Store || Shop Routes
-    Route::get('suplaier', [SuplaireController::class, 'list'])->name('suplaire.list');
-    Route::get('add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
-    Route::get('add/supliars', [SuplaireController::class, 'form'])->name('see.suplaires');
+    Route::group(['prefix'=>'subcategory'], function(){
+        Route::get('/list', [SubcategoryController::class, 'list'])->name('subcategory.list');
+        Route::get('/from', [SubcategoryController::class, 'form'])->name('subcategory.add');
+        Route::post('/store', [SubcategoryController::class, 'store'])->name('store.subcategory');
+        Route::get('/delete/{id}', [SubcategoryController::class, 'delete'])->name('subcategory.delete');
+        Route::get('/edit/{id}', [SubcategoryController::class, 'edit'])->name('subcategory.edit');
+        Route::post('/update/{id}', [SubcategoryController::class, 'update'])->name('subcategory.update');
+        Route::get('/view/{id}', [SubcategoryController::class, 'view'])->name('subcategory.view');
+    });
+    
 
     // Brands Routes
     Route::get('/brand/list', [BrandsController::class, 'list'])->name('brand.list');

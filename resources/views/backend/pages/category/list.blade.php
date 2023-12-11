@@ -13,11 +13,11 @@
 
 <body>
   <div>
-    <h1>Category list</h1>
+  <div class="row mt-3">
+      <div class="col-md-10"><h4>Category list </h4></div>
+      <div class="col-md-2 "><a class="btn btn-success" href="{{route('category.add')}}">Add Category </a></div>
+    </div>
     <hr>
-    <a href="{{route('add.categories')}}">
-      <button type="button" class="btn btn-success">Add Categories</button>
-    </a>
 
     <div class="col-11 container mt-5 rounded border border-warning">
       <table class="table table-striped">
@@ -39,9 +39,9 @@
               </td>
               <td>{{$category->name}}</td>
               <td>
-              <a class="btn" href="{{route('view.categori', $category->id)}}"><i class="fa-solid fa-eye" style="color: #1827fb;"></i></a>
-              <a class="btn" href="{{route('edit.categori', $category->id)}}"><i class="fa-solid fa-pen-to-square" style="color: #11e85d;"></i></a>
-              <a class="btn" href="{{route('delete.categori', $category->id)}}"><i class="fa-solid fa-trash" style="color: #eb0a0a;"></i></a>
+              <a class="btn" href="{{route('category.view', $category->id)}}"><i class="fa-solid fa-eye" style="color: #1827fb;"></i></a>
+              <a class="btn" href="{{route('category.edit', $category->id)}}"><i class="fa-solid fa-pen-to-square" style="color: #11e85d;"></i></a>
+              <a class="btn" href="{{route('category.delete', $category->id)}}"><i class="fa-solid fa-trash" style="color: #eb0a0a;"></i></a>
             </td>
             </tr>
             @endforeach

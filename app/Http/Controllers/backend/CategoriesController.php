@@ -9,12 +9,12 @@ use Illuminate\Support\Facades\Validator;
 
 class CategoriesController extends Controller
 {
-    public function category_list()
+    public function list()
     {
         $categories = Category::paginate(15);
 //        dd($categories);
 
-        return view("backend.pages.category.category",compact('categories'));
+        return view("backend.pages.category.list",compact('categories'));
         // dd('hello');
     }
     public function form()

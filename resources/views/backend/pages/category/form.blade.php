@@ -7,7 +7,7 @@
             </h1>
             <hr>
             <div class=" container pb-5 rounded border border-warning">
-            <form action="{{ route('stor.categories') }}" method="post" class="mt-5" enctype="multipart/form-data">
+            <form action="{{ route('category.store') }}" method="post" class="mt-5" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1">Category Name</label>
