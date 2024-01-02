@@ -29,6 +29,9 @@ return new class extends Migration
             $table->foreignId('sub_category_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
             // Relation Brand            
             $table->foreignId('brand_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+         
+         
+         
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

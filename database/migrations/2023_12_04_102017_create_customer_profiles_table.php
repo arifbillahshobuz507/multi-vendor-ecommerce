@@ -23,8 +23,17 @@ return new class extends Migration
             $table->string('shipping_address', 300);
             $table->enum('gender', ['male', 'female']);
             $table->longText('description');
+            
+            
+            
             //Relation customer
+            
+            
+            
             $table->foreignId('customer_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+           
+           
+           
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

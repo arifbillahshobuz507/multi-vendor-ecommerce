@@ -25,6 +25,8 @@ return new class extends Migration
             $table->longText('description');
             //Relation admin
             $table->foreignId('admin_id')->constrained()->cascadeOnUpdate()->restrictOnDelete();
+           
+           
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

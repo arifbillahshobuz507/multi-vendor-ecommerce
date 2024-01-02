@@ -157,8 +157,8 @@
         <h3>Login Here</h3>
 
         <label for="username">Email</label>
-        <input name="email" type="text" placeholder="Email or Phone" id="username" required>
-        @error('email')
+        <input name="gmail" type="text" placeholder="Email or Phone" id="username" required>
+        @error('gmail')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
